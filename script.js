@@ -5,7 +5,7 @@
 const CONFIG = {
   // ⚠️ SOSTITUISCI con il numero WhatsApp reale in formato internazionale, senza + né spazi
   // Esempio: Italia -> "393331234567"
-  whatsappNumber: "393331234567",
+  whatsappNumber: "212781972132",
 
   // Messaggio generico (bottoni navbar, footer, bolla flottante, CTA finale)
   genericMessage:
