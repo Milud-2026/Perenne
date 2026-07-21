@@ -28,6 +28,17 @@ const LANGS = [
 ];
 
 /* =========================================================
+   Pagine prodotto (stesso ordine dell'array "products" in ogni lingua)
+   ========================================================= */
+const PRODUCT_PAGE_URLS = [
+  "prodotto-collana-rettangolare-bianca.html",
+  "prodotto-collana-rettangolare-nera.html",
+  "prodotto-collana-cuore-dorata.html",
+  "prodotto-collana-rotonda-incisione.html",
+  "prodotto-bracciale-dorato.html",
+];
+
+/* =========================================================
    Dizionario UI statico
    ========================================================= */
 const I18N = {
@@ -67,6 +78,15 @@ const I18N = {
     modalWaLabel: "اطلب عبر واتساب",
     modalFeatures: ["فولاذ مقاوم للصدأ مطلي بالذهب", "مقاوم للماء، مناسب للاستخدام اليومي", "لا يصدأ ولا يتغير لونه مع الزمن", "علبة هدية مشمولة"],
     currency: "درهم",
+    marquee: { text: "التوصيل مجاني في جميع أنحاء المغرب", endsIn: "العرض ينتهي خلال" },
+    form: {
+      title: "املأ البيانات لإتمام الطلب",
+      firstName: "الاسم", lastName: "اللقب", city: "المدينة", quantity: "الكمية", phone: "رقم الهاتف", note: "ملاحظة (اختياري)",
+      submit: "إرسال الطلب عبر واتساب",
+      note2: "سيتم إرسال بياناتك مباشرة إلى واتساب لتأكيد الطلب.",
+      messageTemplate: "السلام عليكم.\nأرغب في طلب المنتج التالي: {product}.\n\nالاسم الكامل: {fullname}\nالمدينة: {city}\nالكمية: {qty}\nرقم الهاتف: {phone}\nملاحظة: {note}\n\nشكرا لكم.",
+    },
+    productPage: { back: "العودة إلى المجموعة" },
     products: [
       { id: "rettangolare-bianca", tag: "إصدار أبيض", name: "قلادة مستطيلة بيضاء", price: "299", desc: "قلادة مستطيلة بحجر أبيض لامع محاط بإطار ذهبي.", descLong: "قلادة مستطيلة أنيقة بحجر أبيض لؤلؤي محاط بإطار من الفولاذ الساتاني المطلي بالذهب. سلسلة رفيعة على شكل ثعبان، ناعمة وقريبة من الرقبة." },
       { id: "rettangolare-nera", tag: "إصدار أسود", name: "قلادة مستطيلة سوداء", price: "299", desc: "قلادة مستطيلة بحجر أسود لامع محاط بإطار ذهبي.", descLong: "قلادة مستطيلة بسيطة، بحجر راتنج أسود لامع محاط بإطار ساتاني من الفولاذ المطلي بالذهب. سلسلة رفيعة على شكل ثعبان، قريبة من الرقبة." },
@@ -125,6 +145,15 @@ const I18N = {
     modalWaLabel: "COMMANDER SUR WHATSAPP",
     modalFeatures: ["Acier inoxydable plaqué or", "Résistant à l'eau, idéal au quotidien", "Ne s'oxyde pas et ne ternit pas", "Emballage cadeau inclus"],
     currency: "DH",
+    marquee: { text: "Livraison gratuite partout au Maroc", endsIn: "L'offre se termine dans" },
+    form: {
+      title: "Remplissez vos informations pour commander",
+      firstName: "Prénom", lastName: "Nom", city: "Ville", quantity: "Quantité", phone: "Numéro de téléphone", note: "Note (facultatif)",
+      submit: "Envoyer la commande sur WhatsApp",
+      note2: "Vos informations seront envoyées directement sur WhatsApp pour confirmer la commande.",
+      messageTemplate: "Bonjour.\nJe souhaite commander le produit suivant : {product}.\n\nNom complet : {fullname}\nVille : {city}\nQuantité : {qty}\nTéléphone : {phone}\nNote : {note}\n\nMerci.",
+    },
+    productPage: { back: "Retour à la collection" },
     products: [
       { id: "rettangolare-bianca", tag: "Édition Blanche", name: "Collier Rectangulaire Blanc", price: "299", desc: "Pendentif rectangulaire avec incrustation nacrée encadrée d'or.", descLong: "La version claire de notre pendentif rectangulaire : une incrustation nacrée lumineuse encadrée d'acier satiné plaqué or. Chaîne fine type serpent, près du cou." },
       { id: "rettangolare-nera", tag: "Édition Noire", name: "Collier Rectangulaire Noir", price: "299", desc: "Pendentif rectangulaire avec incrustation noire brillante encadrée d'or.", descLong: "Un pendentif rectangulaire minimaliste, avec incrustation en résine noire brillante encadrée d'un bord satiné en acier plaqué or. Chaîne fine type serpent." },
@@ -183,6 +212,15 @@ const I18N = {
     modalWaLabel: "ORDER ON WHATSAPP",
     modalFeatures: ["Gold-plated stainless steel", "Water resistant, ideal for daily wear", "Doesn't rust or tarnish over time", "Gift box included"],
     currency: "MAD",
+    marquee: { text: "Free delivery all across Morocco", endsIn: "Offer ends in" },
+    form: {
+      title: "Fill in your details to order",
+      firstName: "First name", lastName: "Last name", city: "City", quantity: "Quantity", phone: "Phone number", note: "Note (optional)",
+      submit: "Send order on WhatsApp",
+      note2: "Your details will be sent directly on WhatsApp to confirm the order.",
+      messageTemplate: "Hello.\nI would like to order the following product: {product}.\n\nFull name: {fullname}\nCity: {city}\nQuantity: {qty}\nPhone: {phone}\nNote: {note}\n\nThank you.",
+    },
+    productPage: { back: "Back to collection" },
     products: [
       { id: "rettangolare-bianca", tag: "White Edition", name: "White Rectangular Necklace", price: "299", desc: "Rectangular pendant with pearly white inlay framed in gold.", descLong: "The light version of our rectangular pendant: a luminous pearly inlay framed in gold-plated satin steel. Thin snake chain, sits close to the neck." },
       { id: "rettangolare-nera", tag: "Black Edition", name: "Black Rectangular Necklace", price: "299", desc: "Rectangular pendant with glossy black inlay framed in gold.", descLong: "A minimal rectangular pendant, with a glossy black resin inlay framed by a satin gold-plated steel border. Thin snake chain, close to the neck." },
@@ -241,6 +279,15 @@ const I18N = {
     modalWaLabel: "ORDINA SU WHATSAPP",
     modalFeatures: ["Acciaio inossidabile placcato oro", "Resistente all'acqua, ideale per l'uso quotidiano", "Non si ossida e non scolorisce nel tempo", "Confezione regalo inclusa"],
     currency: "MAD",
+    marquee: { text: "Consegna gratuita in tutto il Marocco", endsIn: "L'offerta termina tra" },
+    form: {
+      title: "Compila i tuoi dati per ordinare",
+      firstName: "Nome", lastName: "Cognome", city: "Città", quantity: "Quantità", phone: "Numero di telefono", note: "Nota (facoltativa)",
+      submit: "Invia l'ordine su WhatsApp",
+      note2: "I tuoi dati verranno inviati direttamente su WhatsApp per confermare l'ordine.",
+      messageTemplate: "Buongiorno.\nVorrei ordinare il seguente prodotto: {product}.\n\nNome e Cognome: {fullname}\nCittà: {city}\nQuantità: {qty}\nTelefono: {phone}\nNota: {note}\n\nGrazie.",
+    },
+    productPage: { back: "Torna alla collezione" },
     products: [
       { id: "rettangolare-bianca", tag: "Edizione Bianca", name: "Collana Rettangolare Bianca", price: "299", desc: "Pendente rettangolare con inserto madreperlato incorniciato in oro.", descLong: "La versione chiara del nostro pendente rettangolare: un inserto madreperlato luminoso incorniciato in acciaio satinato placcato oro. Catena a maglia serpente, sottile e aderente al collo." },
       { id: "rettangolare-nera", tag: "Edizione Nera", name: "Collana Rettangolare Nera", price: "299", desc: "Pendente rettangolare con inserto nero lucido incorniciato in oro.", descLong: "Un pendente rettangolare minimal, con inserto in resina nera lucida incorniciato da un bordo satinato in acciaio placcato oro. Catena a maglia serpente." },
@@ -315,9 +362,6 @@ function applyStaticI18n() {
   });
   document.getElementById("metaTitle").textContent = dict.metaTitle;
   document.getElementById("metaDesc").setAttribute("content", dict.metaDesc);
-  document.getElementById("topbarText").textContent = dict.topbarText;
-  document.getElementById("topbarEndsIn").textContent = dict.topbarEndsIn;
-  document.getElementById("modalWaLabel").textContent = dict.modalWaLabel;
 }
 
 /* =========================================================
@@ -338,21 +382,23 @@ function updateWaLinks() {
 }
 
 /* =========================================================
-   Render prodotti
+   Render prodotti (home) — ogni card rimanda alla sua pagina dedicata
    ========================================================= */
 function renderProducts() {
   const dict = t();
   const grid = document.getElementById("productGrid");
+  if (!grid) return;
   grid.innerHTML = "";
   dict.products.forEach((p, i) => {
+    const url = PRODUCT_PAGE_URLS[i];
     const card = document.createElement("article");
     card.className = "p-card reveal-scale stagger in";
     card.style.setProperty("--i", i);
     card.innerHTML = `
-      <div class="p-media" data-open-modal="${i}">
+      <a class="p-media" href="${url}">
         <img src="${PRODUCT_IMAGES[i]}" alt="${p.name} — PERENNE" loading="lazy" width="600" height="630">
         <span class="p-zoom-tag">→</span>
-      </div>
+      </a>
       <div class="p-body">
         <span class="p-tag" style="align-self:flex-start;margin-bottom:8px;">${p.tag}</span>
         <div class="p-name">${p.name}</div>
@@ -362,7 +408,7 @@ function renderProducts() {
           <a href="${productWaLink(p.name)}" target="_blank" rel="noopener" class="btn btn-wa">
             <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.6.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5s-.6-1.5-.9-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5c1.5.8 3.3 1.3 5.2 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.7 0-3.4-.5-4.8-1.4l-.3-.2-3.2 1 1-3.2-.2-.3C3.5 14.7 3 13.4 3 12c0-4.9 4.1-9 9-9s9 4.1 9 9-4.1 9-9 9z"/></svg>
           </a>
-          <button class="btn btn-ghost" data-open-modal="${i}">${dict.hero.cta2}</button>
+          <a href="${url}" class="btn btn-ghost">${dict.hero.cta2}</a>
         </div>
       </div>
     `;
@@ -371,42 +417,55 @@ function renderProducts() {
 }
 
 /* =========================================================
-   Product Modal
+   Pagina prodotto singola (prodotto-*.html)
    ========================================================= */
-const pModal = document.getElementById("p-modal");
-function openModal(index) {
+function getProductIndexById(dict, id) {
+  return dict.products.findIndex((p) => p.id === id);
+}
+function renderProductPage() {
+  if (typeof PRODUCT_ID === "undefined") return;
   const dict = t();
-  const p = dict.products[index];
-  if (!p) return;
-  document.getElementById("modalImg").src = PRODUCT_IMAGES[index];
-  document.getElementById("modalImg").alt = p.name;
-  document.getElementById("modalTag").textContent = p.tag;
-  document.getElementById("modalName").textContent = p.name;
-  document.getElementById("modalPrice").textContent = `${p.price} ${dict.currency}`;
-  document.getElementById("modalDesc").textContent = p.descLong;
-  document.getElementById("modalFeatures").innerHTML = dict.modalFeatures
-    .map(
-      (f) =>
-        `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> ${f}</li>`
-    )
+  const idx = getProductIndexById(dict, PRODUCT_ID);
+  if (idx === -1) return;
+  const p = dict.products[idx];
+
+  document.getElementById("metaTitle").textContent = `${p.name} — PERENNE`;
+  document.getElementById("metaDesc").setAttribute("content", p.descLong);
+
+  document.getElementById("ppImg").src = PRODUCT_IMAGES[idx];
+  document.getElementById("ppImg").alt = p.name;
+  document.getElementById("ppTag").textContent = p.tag;
+  document.getElementById("ppName").textContent = p.name;
+  document.getElementById("ppPrice").textContent = `${p.price} ${dict.currency}`;
+  document.getElementById("ppDesc").textContent = p.descLong;
+  document.getElementById("ppFeatures").innerHTML = dict.modalFeatures
+    .map((f) => `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> ${f}</li>`)
     .join("");
-  document.getElementById("modalWaBtn").href = productWaLink(p.name);
-  document.getElementById("modalWaBtn").target = "_blank";
-  pModal.classList.add("open");
-  document.body.style.overflow = "hidden";
+
+  // Le etichette del form (form.*, productPage.back) sono già applicate da applyStaticI18n() via data-i18n
+
+  // Reset e collega il form d'ordine
+  const form = document.getElementById("orderForm");
+  const newForm = form.cloneNode(true);
+  form.parentNode.replaceChild(newForm, form);
+  newForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const firstName = newForm.querySelector("#fFirstName").value.trim();
+    const lastName = newForm.querySelector("#fLastName").value.trim();
+    const city = newForm.querySelector("#fCity").value.trim();
+    const qty = newForm.querySelector("#fQty").value.trim();
+    const phone = newForm.querySelector("#fPhone").value.trim();
+    const note = newForm.querySelector("#fNote").value.trim() || "-";
+    const message = t()
+      .form.messageTemplate.replace("{product}", p.name)
+      .replace("{fullname}", `${firstName} ${lastName}`)
+      .replace("{city}", city)
+      .replace("{qty}", qty)
+      .replace("{phone}", phone)
+      .replace("{note}", note);
+    window.open(waLink(message), "_blank", "noopener");
+  });
 }
-function closeModal() {
-  pModal.classList.remove("open");
-  document.body.style.overflow = "";
-}
-document.addEventListener("click", (e) => {
-  const openTarget = e.target.closest("[data-open-modal]");
-  if (openTarget) openModal(parseInt(openTarget.getAttribute("data-open-modal"), 10));
-  if (e.target.closest("[data-close-modal]")) closeModal();
-});
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeModal();
-});
 
 /* =========================================================
    Trust section
@@ -421,6 +480,7 @@ const TRUST_ICONS = [
 function renderTrust() {
   const dict = t();
   const trustGrid = document.getElementById("trustGrid");
+  if (!trustGrid) return;
   trustGrid.innerHTML = "";
   dict.trust.items.forEach((label, i) => {
     const el = document.createElement("div");
@@ -446,6 +506,7 @@ function renderTestimonials() {
   const dict = t();
   const tTrack = document.getElementById("tTrack");
   const tDotsWrap = document.getElementById("tDots");
+  if (!tTrack || !tDotsWrap) return;
   tTrack.innerHTML = "";
   tDotsWrap.innerHTML = "";
   tTrack.style.transform = "translateX(0)";
@@ -489,6 +550,7 @@ function goToSlide(i) {
 function renderFaq() {
   const dict = t();
   const faqList = document.getElementById("faqList");
+  if (!faqList) return;
   faqList.innerHTML = "";
   dict.faqData.forEach((f) => {
     const item = document.createElement("div");
@@ -515,6 +577,26 @@ function renderFaq() {
 }
 
 /* =========================================================
+   Fascia marquee (scorre da destra o sinistra secondo la lingua)
+   ========================================================= */
+function renderMarquee() {
+  const dict = t();
+  const track = document.getElementById("marqueeTrack");
+  if (!track) return;
+  const itemHTML = `
+    <span class="marquee-item">
+      <span>🚚</span>
+      <span>${dict.marquee.text}</span>
+      <span class="sep">·</span>
+      <span>${dict.marquee.endsIn}</span>
+      <span class="tb-countdown"></span>
+    </span>
+  `;
+  // Due copie identiche per uno scroll continuo senza interruzioni
+  track.innerHTML = itemHTML + itemHTML;
+}
+
+/* =========================================================
    Cambio lingua
    ========================================================= */
 function setLanguage(code) {
@@ -528,10 +610,16 @@ function setLanguage(code) {
   document.documentElement.dir = langMeta.dir;
   applyStaticI18n();
   updateWaLinks();
-  renderProducts();
-  renderTrust();
-  renderTestimonials();
-  renderFaq();
+  renderMarquee();
+  updateCountdownNow();
+  if (typeof PRODUCT_ID !== "undefined") {
+    renderProductPage();
+  } else {
+    renderProducts();
+    renderTrust();
+    renderTestimonials();
+    renderFaq();
+  }
   renderLangSwitch(document.getElementById("langSwitchDesktop"));
   renderLangSwitch(document.getElementById("langSwitchMobile"));
 }
@@ -539,29 +627,32 @@ function setLanguage(code) {
 /* =========================================================
    Countdown fascia promo
    ========================================================= */
+function updateCountdownNow() {
+  const els = document.querySelectorAll(".tb-countdown");
+  if (!els.length) return;
+  const end = new Date(CONFIG.promoEndDate).getTime();
+  const now = Date.now();
+  let diff = end - now;
+  if (diff < 0) diff = 0;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const mins = Math.floor((diff / (1000 * 60)) % 60);
+  const secs = Math.floor((diff / 1000) % 60);
+  const pad = (n) => String(n).padStart(2, "0");
+  const unit = currentLang === "ar" ? { d: "ي", h: "س", m: "د", s: "ث" } : { d: "d", h: "h", m: "m", s: "s" };
+  const html = `<b>${pad(days)}${unit.d}</b><b>${pad(hours)}${unit.h}</b><b>${pad(mins)}${unit.m}</b><b>${pad(secs)}${unit.s}</b>`;
+  els.forEach((el) => (el.innerHTML = html));
+}
 function startCountdown() {
-  const el = document.getElementById("topbarCountdown");
-  function tick() {
-    const end = new Date(CONFIG.promoEndDate).getTime();
-    const now = Date.now();
-    let diff = end - now;
-    if (diff < 0) diff = 0;
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const mins = Math.floor((diff / (1000 * 60)) % 60);
-    const secs = Math.floor((diff / 1000) % 60);
-    const pad = (n) => String(n).padStart(2, "0");
-    el.innerHTML = `<b>${pad(days)}${currentLang === "ar" ? "ي" : "d"}</b><b>${pad(hours)}${currentLang === "ar" ? "س" : "h"}</b><b>${pad(mins)}${currentLang === "ar" ? "د" : "m"}</b><b>${pad(secs)}${currentLang === "ar" ? "ث" : "s"}</b>`;
-  }
-  tick();
-  setInterval(tick, 1000);
+  updateCountdownNow();
+  setInterval(updateCountdownNow, 1000);
 }
 
 /* =========================================================
    Immagini hero / about
    ========================================================= */
-document.getElementById("heroImg").src = IMG.cuore;
-document.getElementById("aboutImg").src = IMG.rotonda;
+if (document.getElementById("heroImg")) document.getElementById("heroImg").src = IMG.cuore;
+if (document.getElementById("aboutImg")) document.getElementById("aboutImg").src = IMG.rotonda;
 
 /* =========================================================
    Navbar scroll state + mobile menu
@@ -579,7 +670,8 @@ navLinks.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => 
    Hero load-in + parallax
    ========================================================= */
 window.addEventListener("load", () => {
-  document.getElementById("hero").classList.add("loaded");
+  const heroEl = document.getElementById("hero");
+  if (heroEl) heroEl.classList.add("loaded");
   document.querySelectorAll("#hero .reveal").forEach((el) => el.classList.add("in"));
 });
 const heroParallax = document.getElementById("heroParallax");
