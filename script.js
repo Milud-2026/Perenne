@@ -3,6 +3,9 @@
    ========================================================= */
 const CONFIG = {
   whatsappNumber: "212781972132", // numero WhatsApp Marocco (formato internazionale, senza +)
+  // Endpoint per ricevere gli ordini via email in automatico, senza che il cliente apra WhatsApp.
+  // Vai su https://formspree.io, crea un form gratuito, e incolla qui il tuo endpoint
+  // (es. "https://formspree.io/f/xxxxxxxx"). Finché resta vuoto, il form usa WhatsApp come metodo temporaneo.
   formEndpoint: "",
   // Data/ora di fine promozione "consegna gratuita" mostrata nella fascia in alto.
   // Formato: "AAAA-MM-GGTHH:MM:SS". Aggiornala periodicamente per mantenere il countdown attivo.
@@ -82,8 +85,12 @@ const I18N = {
     form: {
       title: "املأ البيانات لإتمام الطلب",
       firstName: "الاسم", lastName: "اللقب", city: "المدينة", quantity: "الكمية", phone: "رقم الهاتف", note: "ملاحظة (اختياري)",
-      submit: "إرسال الطلب عبر واتساب",
-      note2: "سيتم إرسال بياناتك مباشرة إلى واتساب لتأكيد الطلب.",
+      submit: "إرسال الطلب",
+      sending: "جاري الإرسال...",
+      success: "تم استلام طلبك بنجاح! سنتواصل معك قريبا لتأكيد التفاصيل.",
+      error: "تعذر إرسال الطلب. يمكنك إرساله مباشرة عبر",
+      errorLink: "واتساب",
+      note2: "سيتم إرسال طلبك مباشرة إلينا لتأكيده، دون الحاجة لفتح واتساب.",
       messageTemplate: "السلام عليكم.\nأرغب في طلب المنتج التالي: {product}.\n\nالاسم الكامل: {fullname}\nالمدينة: {city}\nالكمية: {qty}\nرقم الهاتف: {phone}\nملاحظة: {note}\n\nشكرا لكم.",
     },
     productPage: { back: "العودة إلى المجموعة" },
@@ -149,8 +156,12 @@ const I18N = {
     form: {
       title: "Remplissez vos informations pour commander",
       firstName: "Prénom", lastName: "Nom", city: "Ville", quantity: "Quantité", phone: "Numéro de téléphone", note: "Note (facultatif)",
-      submit: "Envoyer la commande sur WhatsApp",
-      note2: "Vos informations seront envoyées directement sur WhatsApp pour confirmer la commande.",
+      submit: "Envoyer la commande",
+      sending: "Envoi en cours...",
+      success: "Votre commande a bien été reçue ! Nous vous contacterons bientôt pour confirmer les détails.",
+      error: "Impossible d'envoyer la commande. Vous pouvez l'envoyer directement via",
+      errorLink: "WhatsApp",
+      note2: "Vos informations nous seront envoyées directement, sans avoir besoin d'ouvrir WhatsApp.",
       messageTemplate: "Bonjour.\nJe souhaite commander le produit suivant : {product}.\n\nNom complet : {fullname}\nVille : {city}\nQuantité : {qty}\nTéléphone : {phone}\nNote : {note}\n\nMerci.",
     },
     productPage: { back: "Retour à la collection" },
@@ -216,8 +227,12 @@ const I18N = {
     form: {
       title: "Fill in your details to order",
       firstName: "First name", lastName: "Last name", city: "City", quantity: "Quantity", phone: "Phone number", note: "Note (optional)",
-      submit: "Send order on WhatsApp",
-      note2: "Your details will be sent directly on WhatsApp to confirm the order.",
+      submit: "Send order",
+      sending: "Sending...",
+      success: "Your order has been received! We'll contact you shortly to confirm the details.",
+      error: "Couldn't send the order. You can send it directly via",
+      errorLink: "WhatsApp",
+      note2: "Your details are sent directly to us, no need to open WhatsApp.",
       messageTemplate: "Hello.\nI would like to order the following product: {product}.\n\nFull name: {fullname}\nCity: {city}\nQuantity: {qty}\nPhone: {phone}\nNote: {note}\n\nThank you.",
     },
     productPage: { back: "Back to collection" },
@@ -283,8 +298,12 @@ const I18N = {
     form: {
       title: "Compila i tuoi dati per ordinare",
       firstName: "Nome", lastName: "Cognome", city: "Città", quantity: "Quantità", phone: "Numero di telefono", note: "Nota (facoltativa)",
-      submit: "Invia l'ordine su WhatsApp",
-      note2: "I tuoi dati verranno inviati direttamente su WhatsApp per confermare l'ordine.",
+      submit: "Invia Ordine",
+      sending: "Invio in corso...",
+      success: "Il tuo ordine è stato ricevuto! Ti contatteremo a breve per confermare i dettagli.",
+      error: "Non è stato possibile inviare l'ordine. Puoi inviarlo direttamente via",
+      errorLink: "WhatsApp",
+      note2: "I tuoi dati ci verranno inviati direttamente, senza bisogno di aprire WhatsApp.",
       messageTemplate: "Buongiorno.\nVorrei ordinare il seguente prodotto: {product}.\n\nNome e Cognome: {fullname}\nCittà: {city}\nQuantità: {qty}\nTelefono: {phone}\nNota: {note}\n\nGrazie.",
     },
     productPage: { back: "Torna alla collezione" },
@@ -413,6 +432,25 @@ function renderProducts() {
       </div>
     `;
     grid.appendChild(card);
+    attachTilt(card, { max: 7, lift: -10 });
+  });
+}
+
+/* =========================================================
+   Effetto tilt 3D al movimento del mouse
+   ========================================================= */
+function attachTilt(el, opts) {
+  if (!el) return;
+  const max = (opts && opts.max) || 8;
+  const lift = (opts && opts.lift) || 0;
+  el.addEventListener("mousemove", (e) => {
+    const rect = el.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    el.style.transform = `perspective(900px) translateY(${lift}px) rotateY(${(x * max).toFixed(2)}deg) rotateX(${(-y * max).toFixed(2)}deg)`;
+  });
+  el.addEventListener("mouseleave", () => {
+    el.style.transform = "";
   });
 }
 
@@ -448,22 +486,74 @@ function renderProductPage() {
   const form = document.getElementById("orderForm");
   const newForm = form.cloneNode(true);
   form.parentNode.replaceChild(newForm, form);
-  newForm.addEventListener("submit", (e) => {
+  const statusEl = newForm.querySelector("#formStatus");
+  const submitBtn = newForm.querySelector("#formSubmitBtn");
+  const submitLabelEl = newForm.querySelector("#formSubmitLabel");
+
+  newForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+    const dict2 = t();
     const firstName = newForm.querySelector("#fFirstName").value.trim();
     const lastName = newForm.querySelector("#fLastName").value.trim();
     const city = newForm.querySelector("#fCity").value.trim();
     const qty = newForm.querySelector("#fQty").value.trim();
     const phone = newForm.querySelector("#fPhone").value.trim();
     const note = newForm.querySelector("#fNote").value.trim() || "-";
-    const message = t()
-      .form.messageTemplate.replace("{product}", p.name)
+    const message = dict2.form.messageTemplate
+      .replace("{product}", p.name)
       .replace("{fullname}", `${firstName} ${lastName}`)
       .replace("{city}", city)
       .replace("{qty}", qty)
       .replace("{phone}", phone)
       .replace("{note}", note);
-    window.open(waLink(message), "_blank", "noopener");
+
+    if (CONFIG.formEndpoint) {
+      // Invio diretto: l'ordine arriva via email al negozio, il cliente non deve aprire WhatsApp
+      submitBtn.disabled = true;
+      if (submitLabelEl) submitLabelEl.textContent = dict2.form.sending;
+      if (statusEl) {
+        statusEl.className = "form-status";
+        statusEl.textContent = "";
+      }
+      try {
+        const res = await fetch(CONFIG.formEndpoint, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: new URLSearchParams({
+            _subject: `Nuovo ordine PERENNE — ${p.name}`,
+            prodotto: p.name,
+            nome: firstName,
+            cognome: lastName,
+            citta: city,
+            quantita: qty,
+            telefono: phone,
+            nota: note,
+            messaggio_completo: message,
+          }),
+        });
+        if (res.ok) {
+          newForm.reset();
+          if (statusEl) {
+            statusEl.className = "form-status success";
+            statusEl.textContent = dict2.form.success;
+          }
+          if (submitLabelEl) submitLabelEl.textContent = dict2.form.submit;
+          submitBtn.disabled = false;
+        } else {
+          throw new Error("Formspree error");
+        }
+      } catch (err) {
+        if (statusEl) {
+          statusEl.className = "form-status error";
+          statusEl.innerHTML = `${dict2.form.error} <a href="${waLink(message)}" target="_blank" rel="noopener">${dict2.form.errorLink}</a>`;
+        }
+        if (submitLabelEl) submitLabelEl.textContent = dict2.form.submit;
+        submitBtn.disabled = false;
+      }
+    } else {
+      // Servizio non ancora configurato: apri WhatsApp come soluzione temporanea
+      window.open(waLink(message), "_blank", "noopener");
+    }
   });
 }
 
@@ -653,6 +743,7 @@ function startCountdown() {
    ========================================================= */
 if (document.getElementById("heroImg")) document.getElementById("heroImg").src = IMG.cuore;
 if (document.getElementById("aboutImg")) document.getElementById("aboutImg").src = IMG.rotonda;
+attachTilt(document.querySelector(".product-page-gallery"), { max: 5 });
 
 /* =========================================================
    Navbar scroll state + mobile menu
@@ -675,12 +766,33 @@ window.addEventListener("load", () => {
   document.querySelectorAll("#hero .reveal").forEach((el) => el.classList.add("in"));
 });
 const heroParallax = document.getElementById("heroParallax");
+let heroScrollY = 0;
+let heroTiltX = 0;
+let heroTiltY = 0;
+function updateHeroTransform() {
+  if (!heroParallax) return;
+  heroParallax.style.transform = `translateY(${heroScrollY}px) perspective(900px) rotateY(${heroTiltX}deg) rotateX(${heroTiltY}deg)`;
+}
 window.addEventListener("scroll", () => {
   const y = window.scrollY;
-  if (heroParallax && y < window.innerHeight) {
-    heroParallax.style.transform = `translateY(${y * 0.18}px)`;
-  }
+  heroScrollY = y < window.innerHeight ? y * 0.18 : heroScrollY;
+  updateHeroTransform();
 });
+if (heroParallax) {
+  heroParallax.addEventListener("mousemove", (e) => {
+    const rect = heroParallax.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    heroTiltX = +(x * 6).toFixed(2);
+    heroTiltY = +(-y * 6).toFixed(2);
+    updateHeroTransform();
+  });
+  heroParallax.addEventListener("mouseleave", () => {
+    heroTiltX = 0;
+    heroTiltY = 0;
+    updateHeroTransform();
+  });
+}
 
 /* =========================================================
    Scroll reveal (IntersectionObserver) — per elementi statici

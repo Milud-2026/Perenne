@@ -77,6 +77,11 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:600;letter-spacing:-0.02em;li
 .lang-switch button{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;background:transparent;border:1.5px solid transparent;transition:all .35s var(--ease);opacity:.55;}
 .lang-switch button:hover{opacity:1;transform:translateY(-2px);}
 .lang-switch button.active{opacity:1;border-color:var(--gold);background:rgba(201,169,97,0.15);}
+#langSwitchMobile{display:none;}
+@media(max-width:900px){
+  #langSwitchDesktop{display:none;}
+  #langSwitchMobile{display:flex;}
+}
 
 #navbar{position:fixed;top:var(--topbar-h);left:0;right:0;z-index:200;padding:20px 0;transition:background .5s var(--ease),padding .5s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease),top .3s;border-bottom:1px solid transparent;}
 #navbar.scrolled{background:rgba(250,250,250,0.72);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);padding:13px 0;border-bottom:1px solid var(--line);box-shadow:0 8px 30px -20px rgba(23,20,15,0.2);}
@@ -336,3 +341,50 @@ footer{padding:56px 0 40px;border-top:1px solid var(--line);}
 
 /* ============ QUICK ORDER on cards (link to product page) ============ */
 .p-actions .btn[href]{text-align:center;}
+
+/* ============ 3D DEPTH EFFECTS ============ */
+.hero-orb{
+  position:absolute;border-radius:50%;
+  filter:blur(50px);z-index:-1;pointer-events:none;
+  animation:orb-float 9s ease-in-out infinite;
+}
+.hero-orb.o1{width:320px;height:320px;top:8%;left:-6%;background:radial-gradient(circle,rgba(233,217,174,0.85),transparent 70%);animation-duration:11s;}
+.hero-orb.o2{width:260px;height:260px;bottom:6%;right:-4%;background:radial-gradient(circle,rgba(201,169,97,0.55),transparent 70%);animation-duration:8s;animation-delay:-3s;}
+.hero-orb.o3{width:180px;height:180px;top:46%;right:18%;background:radial-gradient(circle,rgba(255,255,255,0.9),transparent 70%);animation-duration:7s;animation-delay:-1.5s;}
+@keyframes orb-float{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-16px,-26px) scale(1.08);}}
+
+#hero .container{perspective:1400px;}
+.hero-card{transform-style:preserve-3d;transition:transform .35s cubic-bezier(.16,.84,.24,1), box-shadow .35s;}
+.hero-card::before{
+  content:'';position:absolute;inset:0;z-index:2;
+  background:linear-gradient(125deg,rgba(255,255,255,0.35) 0%,transparent 30%,transparent 70%,rgba(255,255,255,0.15) 100%);
+  mix-blend-mode:overlay;pointer-events:none;
+}
+
+.product-grid{perspective:1600px;}
+.p-card{transform-style:preserve-3d;will-change:transform;box-shadow:0 1px 2px rgba(23,20,15,0.06), var(--shadow-soft);}
+.p-card:hover{box-shadow:0 1px 2px rgba(23,20,15,0.08), var(--shadow-deep), 0 40px 90px -30px rgba(169,132,63,0.35);}
+.p-media{transform:translateZ(20px);}
+
+.product-page-gallery{transform-style:preserve-3d;transition:transform .35s cubic-bezier(.16,.84,.24,1);}
+
+.trust-item{transform-style:preserve-3d;}
+.trust-item:hover{box-shadow:0 30px 60px -20px rgba(0,0,0,0.45), 0 0 0 1px rgba(201,169,97,0.25) inset;}
+.trust-icon{box-shadow:0 10px 24px -6px rgba(169,132,63,0.6), inset 0 -3px 6px rgba(0,0,0,0.15), inset 0 2px 4px rgba(255,255,255,0.5);}
+
+.btn-gold{box-shadow:0 14px 34px -10px rgba(169,132,63,0.55), inset 0 1px 1px rgba(255,255,255,0.6), inset 0 -2px 4px rgba(169,132,63,0.4);}
+.btn-gold:active{transform:scale(0.96) translateY(1px);box-shadow:0 6px 16px -8px rgba(169,132,63,0.5), inset 0 2px 6px rgba(0,0,0,0.2);}
+.logo-mark{box-shadow:0 0 0 4px rgba(201,169,97,0.18), 0 3px 8px -2px rgba(169,132,63,0.7), inset 0 1px 2px rgba(255,255,255,0.8);}
+
+@media(prefers-reduced-motion: reduce){
+  .hero-orb{animation:none;}
+  .hero-card,.p-card,.product-page-gallery{transition:none !important;transform:none !important;}
+}
+
+/* ============ FORM STATUS ============ */
+.form-status{font-size:13.5px;line-height:1.6;border-radius:var(--radius-sm);padding:0;transition:all .3s var(--ease);}
+.form-status:empty{display:none;}
+.form-status.success{padding:14px 16px;margin-bottom:14px;background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.35);color:#1a7a3e;}
+.form-status.error{padding:14px 16px;margin-bottom:14px;background:rgba(220,90,60,0.1);border:1px solid rgba(220,90,60,0.3);color:#a83e28;}
+.form-status.error a{color:var(--gold-deep);text-decoration:underline;font-weight:600;}
+#formSubmitBtn:disabled{opacity:.7;cursor:not-allowed;}
