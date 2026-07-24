@@ -388,3 +388,103 @@ footer{padding:56px 0 40px;border-top:1px solid var(--line);}
 .form-status.error{padding:14px 16px;margin-bottom:14px;background:rgba(220,90,60,0.1);border:1px solid rgba(220,90,60,0.3);color:#a83e28;}
 .form-status.error a{color:var(--gold-deep);text-decoration:underline;font-weight:600;}
 #formSubmitBtn:disabled{opacity:.7;cursor:not-allowed;}
+
+/* ============ LOGO — icona + testo fusi ============ */
+.logo{display:flex;align-items:center;gap:10px;}
+.logo-icon{width:26px;height:26px;flex-shrink:0;transition:transform .5s var(--ease);}
+.logo:hover .logo-icon{transform:rotate(-8deg) scale(1.08);}
+.logo-text{
+  font-family:var(--ff-display);font-size:21px;font-weight:600;
+  letter-spacing:0.14em;
+  background:linear-gradient(120deg,var(--gold-deep),var(--gold) 45%,var(--gold-light));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+[dir="rtl"] .logo-text{font-family:var(--ff-ar-display);letter-spacing:0.04em;}
+
+/* ============ HERO BRAND LOCKUP (logo grande, punto focale) ============ */
+.hero-brand{
+  display:flex;flex-direction:column;align-items:flex-start;gap:18px;
+  margin-bottom:34px;position:relative;
+}
+[dir="rtl"] .hero-brand{align-items:flex-end;}
+.hero-brand-glow{
+  position:absolute;top:50%;left:0;transform:translateY(-50%);
+  width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,169,97,0.45),transparent 70%);
+  filter:blur(30px);z-index:-1;
+  animation:brand-glow-pulse 4s ease-in-out infinite;
+}
+[dir="rtl"] .hero-brand-glow{left:auto;right:0;}
+@keyframes brand-glow-pulse{0%,100%{opacity:0.6;transform:translateY(-50%) scale(1);}50%{opacity:1;transform:translateY(-50%) scale(1.15);}}
+.hero-brand-icon{
+  width:56px;height:56px;
+  opacity:0;transform:scale(0.6) rotate(-15deg);
+  animation:brand-icon-in 1s cubic-bezier(.16,.84,.24,1) 0.1s forwards;
+  filter:drop-shadow(0 6px 18px rgba(169,132,63,0.5));
+}
+@keyframes brand-icon-in{to{opacity:1;transform:scale(1) rotate(0);}}
+.hero-brand-word{
+  font-family:var(--ff-display);
+  font-size:clamp(30px,4.4vw,54px);
+  font-weight:600;letter-spacing:0.16em;
+  background:linear-gradient(120deg,var(--gold-deep) 0%,var(--gold) 35%,var(--gold-light) 60%,var(--gold) 100%);
+  background-size:220% auto;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  opacity:0;transform:translateY(14px);
+  animation:brand-word-in 1s cubic-bezier(.16,.84,.24,1) 0.35s forwards, brand-shimmer 6s linear infinite 1.4s;
+}
+@keyframes brand-word-in{to{opacity:1;transform:translateY(0);}}
+@keyframes brand-shimmer{0%{background-position:0% 50%;}100%{background-position:200% 50%;}}
+[dir="rtl"] .hero-brand-word{letter-spacing:0.05em;}
+
+/* Particelle luminose leggere nell'hero */
+.hero-particle{
+  position:absolute;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,0.9),rgba(201,169,97,0.3) 60%,transparent 75%);
+  pointer-events:none;z-index:0;
+  animation:particle-drift linear infinite;
+}
+@keyframes particle-drift{
+  0%{transform:translateY(0) translateX(0);opacity:0;}
+  10%{opacity:0.9;}
+  90%{opacity:0.5;}
+  100%{transform:translateY(-140px) translateX(20px);opacity:0;}
+}
+@media(prefers-reduced-motion: reduce){
+  .hero-brand-icon,.hero-brand-word,.hero-brand-glow,.hero-particle{animation:none !important;opacity:1;transform:none;}
+}
+
+/* ============ PRODUCT PAGE — BADGES ============ */
+.pp-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.pp-badge{
+  font-family:var(--ff-mono);font-size:12px;font-weight:500;
+  padding:7px 14px;border-radius:100px;
+  background:linear-gradient(120deg,var(--gold-light),var(--gold));
+  color:var(--ink);box-shadow:0 6px 16px -6px rgba(169,132,63,0.5);
+}
+[dir="rtl"] .pp-badge{font-family:var(--ff-ar-body);}
+
+/* ============ PRODUCT PAGE — STORY ============ */
+#pp-story{background:var(--ink);color:#fff;}
+.pp-story-inner{max-width:760px;margin:0 auto;text-align:center;}
+#pp-story .eyebrow{color:var(--gold-light);justify-content:center;}
+#pp-story .eyebrow::before{background:var(--gold-light);}
+#pp-story h2{font-size:clamp(26px,3.4vw,38px);margin:16px 0 22px;}
+#pp-story p{font-size:17px;line-height:1.85;color:rgba(255,255,255,0.75);}
+
+/* ============ PRODUCT PAGE — REVIEWS ============ */
+.pp-reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+@media(max-width:980px){.pp-reviews-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:620px){.pp-reviews-grid{grid-template-columns:1fr;}}
+.review-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:24px;box-shadow:var(--shadow-soft);transition:transform .4s var(--ease);
+}
+.review-card:hover{transform:translateY(-4px);}
+.review-head{display:flex;align-items:center;gap:12px;}
+.review-head b{display:block;font-size:14px;}
+.review-head span{display:block;font-size:12px;color:var(--ink-soft);}
+.review-card .t-stars svg{fill:var(--gold);width:14px;height:14px;}
+.review-card .t-quote{font-size:14.5px;}
+#pp-reviews .section-head h2{font-family:var(--ff-mono);font-size:20px;letter-spacing:0.02em;}
+[dir="rtl"] #pp-reviews .section-head h2{font-family:var(--ff-ar-body);}

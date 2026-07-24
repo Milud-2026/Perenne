@@ -41,6 +41,1089 @@ const PRODUCT_PAGE_URLS = [
   "prodotto-bracciale-dorato.html",
 ];
 
+const PRODUCT_EXTRAS = {
+  it: {
+    "rettangolare-bianca": {
+      badges: [
+        "✨ Bestseller",
+        "❤️ Più regalato"
+      ],
+      storyTitle: "Il Rettangolo Bianco",
+      storyText: "C'è un'eleganza che non ha bisogno di dire nulla per farsi notare. Il Rettangolo Bianco nasce per chi cerca la semplicità come forma più alta di stile: un dettaglio luminoso che si abbina a ogni look, dal denim del mattino al little black dress della sera. Non è un gioiello che si nota per primo — è quello che si ricorda per ultimo.",
+      reviews: [
+        {
+          name: "Yasmine B.",
+          rating: 5,
+          date: "Giugno 2026",
+          text: "Elegante e delicata, la porto ogni giorno senza mai stancarmi."
+        },
+        {
+          name: "Salma K.",
+          rating: 5,
+          date: "Maggio 2026",
+          text: "Si abbina a tutto, esattamente come speravo."
+        },
+        {
+          name: "Rania D.",
+          rating: 4,
+          date: "Maggio 2026",
+          text: "Bellissima, la catena è più sottile di quanto immaginassi ma non delude."
+        },
+        {
+          name: "Amina T.",
+          rating: 5,
+          date: "Aprile 2026",
+          text: "Regalo perfetto per mia madre, imballaggio curato."
+        },
+        {
+          name: "Nada F.",
+          rating: 5,
+          date: "Marzo 2026",
+          text: "Qualità sorprendente per il prezzo, consigliatissima."
+        }
+      ],
+      faq: [
+        {
+          q: "La catena è regolabile?",
+          a: "Sì, la lunghezza è pensata per adattarsi comodamente alla maggior parte dei colli, standard e regolabile."
+        },
+        {
+          q: "L'inserto bianco può graffiarsi?",
+          a: "È resistente all'uso quotidiano, ma come ogni superficie lucida consigliamo di evitare contatti diretti con oggetti abrasivi."
+        },
+        {
+          q: "Arriva in confezione regalo?",
+          a: "Sì, ogni collana è confezionata in una scatola elegante pronta per essere regalata."
+        }
+      ]
+    },
+    "rettangolare-nera": {
+      badges: [
+        "🔥 Nuovo"
+      ],
+      storyTitle: "Il Rettangolo Nero",
+      storyText: "C'è chi entra in una stanza e chi la domina in silenzio. Il Rettangolo Nero è pensato per la seconda categoria: linee pulite, un nero profondo incorniciato d'oro, la stessa sobrietà di chi non ha bisogno di dimostrare nulla. Perfetto sopra una camicia bianca, in ufficio o a cena d'affari — un dettaglio che parla di controllo, non di appariscenza.",
+      reviews: [
+        {
+          name: "Karim L.",
+          rating: 5,
+          date: "Giugno 2026",
+          text: "Look minimal perfetto, la indosso ogni giorno in ufficio."
+        },
+        {
+          name: "Mehdi R.",
+          rating: 5,
+          date: "Maggio 2026",
+          text: "Elegante senza essere appariscente, esattamente quello che cercavo."
+        },
+        {
+          name: "Sofia A.",
+          rating: 4,
+          date: "Aprile 2026",
+          text: "Molto bella, il nero è profondo e non sembra plastica."
+        },
+        {
+          name: "Youssef E.",
+          rating: 5,
+          date: "Marzo 2026",
+          text: "Ottima qualità, consegna più veloce del previsto."
+        },
+        {
+          name: "Hicham B.",
+          rating: 5,
+          date: "Marzo 2026",
+          text: "Regalo apprezzatissimo per il mio socio in affari."
+        }
+      ],
+      faq: [
+        {
+          q: "È adatta anche per un look maschile?",
+          a: "Sì, il design minimal e il colore scuro la rendono versatile per outfit sia maschili che femminili."
+        },
+        {
+          q: "L'inserto nero è resistente ai graffi?",
+          a: "È una resina lucida trattata per resistere all'uso quotidiano, consigliamo comunque cura nella conservazione."
+        },
+        {
+          q: "Che lunghezza ha la catena?",
+          a: "Catena a maglia serpente sottile, lunghezza standard adatta alla maggior parte dei colli."
+        }
+      ]
+    },
+    "cuore-dorata": {
+      badges: [
+        "✨ Bestseller",
+        "❤️ Più regalato"
+      ],
+      storyTitle: "Il Cuore",
+      storyText: "Ci sono regali che si aprono e regali che si ricordano. Il Cuore Dorato nasce per i momenti che vale la pena incidere: un primo 'ti amo', un anniversario, una proposta sussurrata. La sua incisione artigianale racconta una cura che nessun messaggio scritto potrebbe eguagliare — il tipo di gesto che si porta al collo, non nel cassetto.",
+      reviews: [
+        {
+          name: "Imane Z.",
+          rating: 5,
+          date: "Giugno 2026",
+          text: "Regalo di San Valentino perfetto, lei si è emozionata."
+        },
+        {
+          name: "Zineb H.",
+          rating: 5,
+          date: "Maggio 2026",
+          text: "L'incisione è bellissima dal vivo, foto non le rende giustizia."
+        },
+        {
+          name: "Kenza M.",
+          rating: 5,
+          date: "Maggio 2026",
+          text: "Comprata per il nostro anniversario, non potevo scegliere meglio."
+        },
+        {
+          name: "Fatima Ezzahra",
+          rating: 4,
+          date: "Aprile 2026",
+          text: "Molto romantica, arrivata giusto in tempo per il compleanno."
+        },
+        {
+          name: "Douae S.",
+          rating: 5,
+          date: "Marzo 2026",
+          text: "La qualità supera di gran lunga il prezzo pagato."
+        }
+      ],
+      faq: [
+        {
+          q: "Cosa raffigura l'incisione sul ciondolo?",
+          a: "Un dettaglio calligrafico artigianale, rifinito a mano su ogni pezzo per un effetto unico che cattura la luce."
+        },
+        {
+          q: "È adatta come regalo di fidanzamento?",
+          a: "Sì, è uno dei nostri pezzi più scelti per anniversari, San Valentino e proposte."
+        },
+        {
+          q: "La catena è regolabile in lunghezza?",
+          a: "Sì, la catena sottile a maglia rolo si adatta comodamente a diverse lunghezze del collo."
+        }
+      ]
+    },
+    "rotonda-incisione": {
+      badges: [
+        "🚚 Consegna rapida"
+      ],
+      storyTitle: "La Moneta Incisa",
+      storyText: "Alcuni gioielli si scelgono per come brillano. Altri, per quello che portano con sé. La Moneta Incisa affonda le sue radici in una tradizione di dettagli calligrafici tramandati nel tempo — un'incisione che dà valore simbolico al gesto di indossarla, oltre che estetico. Un pezzo che si tramanda, non solo si sfoggia.",
+      reviews: [
+        {
+          name: "Hajar N.",
+          rating: 5,
+          date: "Giugno 2026",
+          text: "Un pezzo con un significato speciale per la nostra famiglia."
+        },
+        {
+          name: "Oumaima K.",
+          rating: 5,
+          date: "Maggio 2026",
+          text: "L'incisione è finissima, si vede la cura artigianale."
+        },
+        {
+          name: "Meryem L.",
+          rating: 4,
+          date: "Aprile 2026",
+          text: "Bellissima, leggermente più piccola di quanto immaginassi ma comunque perfetta."
+        },
+        {
+          name: "Asmae R.",
+          rating: 5,
+          date: "Marzo 2026",
+          text: "Regalata a mia nonna, l'ha adorata."
+        },
+        {
+          name: "Btissam A.",
+          rating: 5,
+          date: "Marzo 2026",
+          text: "Un design che si distingue dal solito, molto elegante."
+        }
+      ],
+      faq: [
+        {
+          q: "L'incisione è uguale su ogni pezzo?",
+          a: "Il motivo tradizionale è coerente su ogni pezzo, con una finitura rifinita a mano su entrambe le facce."
+        },
+        {
+          q: "Il ciondolo si può indossare tutti i giorni?",
+          a: "Sì, l'acciaio placcato oro resiste all'uso quotidiano e non perde la sua finitura."
+        },
+        {
+          q: "È adatta come regalo per un'occasione speciale?",
+          a: "È uno dei pezzi più scelti per regali dal forte valore simbolico, come nascite, ricorrenze e gesti di affetto familiare."
+        }
+      ]
+    },
+    "bracciale-dorato": {
+      badges: [
+        "🔥 Nuovo",
+        "🚚 Consegna rapida"
+      ],
+      storyTitle: "Il Bracciale",
+      storyText: "Non tutti i gioielli sono pensati per un'occasione. Alcuni sono pensati per restare — in palestra, al lavoro, la sera fuori. Il Bracciale Dorato nasce per non essere mai tolto: una chiusura di sicurezza, una maglia solida, un dettaglio verde che cattura la luce senza gridare. La definizione di eleganza che si dimentica di indossare, perché non pesa mai.",
+      reviews: [
+        {
+          name: "Nawal I.",
+          rating: 5,
+          date: "Giugno 2026",
+          text: "Lo porto sempre, anche in palestra, non si è scolorito."
+        },
+        {
+          name: "Siham T.",
+          rating: 5,
+          date: "Maggio 2026",
+          text: "Chiusura molto sicura, non ho mai paura di perderlo."
+        },
+        {
+          name: "Lamiae B.",
+          rating: 4,
+          date: "Aprile 2026",
+          text: "Bellissimo dettaglio verde, si vede che è curato nei particolari."
+        },
+        {
+          name: "Ghita M.",
+          rating: 5,
+          date: "Marzo 2026",
+          text: "Regalo perfetto, arrivato prima del previsto."
+        },
+        {
+          name: "Widad E.",
+          rating: 5,
+          date: "Marzo 2026",
+          text: "Elegante ma comodo da portare ogni giorno."
+        }
+      ],
+      faq: [
+        {
+          q: "La chiusura è sicura per l'uso quotidiano?",
+          a: "Sì, la chiusura di sicurezza a scatto è pensata per restare al polso anche durante le attività quotidiane."
+        },
+        {
+          q: "È regolabile in taglia?",
+          a: "Il bracciale ha una misura standard pensata per adattarsi alla maggior parte dei polsi."
+        },
+        {
+          q: "Il dettaglio in cristallo può danneggiarsi con l'acqua?",
+          a: "No, resiste tranquillamente a doccia e sudore come il resto del pezzo in acciaio placcato oro."
+        }
+      ]
+    }
+  },
+  fr: {
+    "rettangolare-bianca": {
+      badges: [
+        "✨ Best-seller",
+        "❤️ Le plus offert"
+      ],
+      storyTitle: "Le Rectangle Blanc",
+      storyText: "Il existe une élégance qui n'a pas besoin de crier pour se faire remarquer. Le Rectangle Blanc est pensé pour celles qui voient dans la simplicité la forme la plus haute du style : un détail lumineux qui s'accorde à chaque tenue, du denim du matin à la petite robe noire du soir. Ce n'est pas un bijou qu'on remarque en premier — c'est celui dont on se souvient en dernier.",
+      reviews: [
+        {
+          name: "Yasmine B.",
+          rating: 5,
+          date: "Juin 2026",
+          text: "Élégant et délicat, je le porte tous les jours sans jamais m'en lasser."
+        },
+        {
+          name: "Salma K.",
+          rating: 5,
+          date: "Mai 2026",
+          text: "Il s'accorde avec tout, exactement comme je l'espérais."
+        },
+        {
+          name: "Rania D.",
+          rating: 4,
+          date: "Mai 2026",
+          text: "Magnifique, la chaîne est plus fine que je ne l'imaginais mais très satisfaite."
+        },
+        {
+          name: "Amina T.",
+          rating: 5,
+          date: "Avril 2026",
+          text: "Cadeau parfait pour ma mère, emballage très soigné."
+        },
+        {
+          name: "Nada F.",
+          rating: 5,
+          date: "Mars 2026",
+          text: "Qualité surprenante pour le prix, je recommande vivement."
+        }
+      ],
+      faq: [
+        {
+          q: "La chaîne est-elle réglable ?",
+          a: "Oui, la longueur est pensée pour s'adapter confortablement à la plupart des cous."
+        },
+        {
+          q: "L'incrustation blanche peut-elle se rayer ?",
+          a: "Elle résiste à l'usage quotidien, mais comme toute surface brillante, évitez les contacts avec des objets abrasifs."
+        },
+        {
+          q: "Est-il livré dans un coffret cadeau ?",
+          a: "Oui, chaque collier est présenté dans un écrin élégant, prêt à être offert."
+        }
+      ]
+    },
+    "rettangolare-nera": {
+      badges: [
+        "🔥 Nouveau"
+      ],
+      storyTitle: "Le Rectangle Noir",
+      storyText: "Il y a celles qui entrent dans une pièce et celles qui la dominent en silence. Le Rectangle Noir est pensé pour la seconde catégorie : des lignes épurées, un noir profond encadré d'or, la même sobriété que celles qui n'ont rien à prouver. Parfait sur une chemise blanche, au bureau ou lors d'un dîner d'affaires.",
+      reviews: [
+        {
+          name: "Karim L.",
+          rating: 5,
+          date: "Juin 2026",
+          text: "Look minimaliste parfait, je le porte tous les jours au bureau."
+        },
+        {
+          name: "Mehdi R.",
+          rating: 5,
+          date: "Mai 2026",
+          text: "Élégant sans être voyant, exactement ce que je cherchais."
+        },
+        {
+          name: "Sofia A.",
+          rating: 4,
+          date: "Avril 2026",
+          text: "Très beau, le noir est profond et ne ressemble pas à du plastique."
+        },
+        {
+          name: "Youssef E.",
+          rating: 5,
+          date: "Mars 2026",
+          text: "Excellente qualité, livraison plus rapide que prévu."
+        },
+        {
+          name: "Hicham B.",
+          rating: 5,
+          date: "Mars 2026",
+          text: "Cadeau très apprécié pour mon associé."
+        }
+      ],
+      faq: [
+        {
+          q: "Convient-il aussi à un look masculin ?",
+          a: "Oui, le design minimaliste et la couleur sombre le rendent polyvalent pour les tenues masculines et féminines."
+        },
+        {
+          q: "L'incrustation noire résiste-t-elle aux rayures ?",
+          a: "C'est une résine brillante traitée pour résister à l'usage quotidien."
+        },
+        {
+          q: "Quelle est la longueur de la chaîne ?",
+          a: "Chaîne fine type serpent, longueur standard adaptée à la plupart des cous."
+        }
+      ]
+    },
+    "cuore-dorata": {
+      badges: [
+        "✨ Best-seller",
+        "❤️ Le plus offert"
+      ],
+      storyTitle: "Le Cœur",
+      storyText: "Il y a des cadeaux qu'on ouvre et des cadeaux dont on se souvient. Le Cœur Doré est né pour les moments qui méritent d'être gravés : un premier « je t'aime », un anniversaire, une demande murmurée. Sa gravure artisanale raconte une attention qu'aucun message écrit ne pourrait égaler.",
+      reviews: [
+        {
+          name: "Imane Z.",
+          rating: 5,
+          date: "Juin 2026",
+          text: "Cadeau de Saint-Valentin parfait, elle a été très émue."
+        },
+        {
+          name: "Zineb H.",
+          rating: 5,
+          date: "Mai 2026",
+          text: "La gravure est magnifique en vrai, les photos ne lui rendent pas justice."
+        },
+        {
+          name: "Kenza M.",
+          rating: 5,
+          date: "Mai 2026",
+          text: "Acheté pour notre anniversaire, je ne pouvais pas mieux choisir."
+        },
+        {
+          name: "Fatima Ezzahra",
+          rating: 4,
+          date: "Avril 2026",
+          text: "Très romantique, arrivé juste à temps pour l'anniversaire."
+        },
+        {
+          name: "Douae S.",
+          rating: 5,
+          date: "Mars 2026",
+          text: "La qualité dépasse largement le prix payé."
+        }
+      ],
+      faq: [
+        {
+          q: "Que représente la gravure sur le pendentif ?",
+          a: "Un détail calligraphique artisanal, finalisé à la main sur chaque pièce pour un effet unique qui capte la lumière."
+        },
+        {
+          q: "Convient-il comme cadeau de fiançailles ?",
+          a: "Oui, c'est l'une de nos pièces les plus choisies pour les anniversaires, la Saint-Valentin et les demandes."
+        },
+        {
+          q: "La chaîne est-elle réglable ?",
+          a: "Oui, la chaîne fine type rolo s'adapte confortablement à différentes longueurs de cou."
+        }
+      ]
+    },
+    "rotonda-incisione": {
+      badges: [
+        "🚚 Livraison rapide"
+      ],
+      storyTitle: "La Médaille Gravée",
+      storyText: "Certains bijoux se choisissent pour leur éclat. D'autres, pour ce qu'ils portent avec eux. La Médaille Gravée puise ses racines dans une tradition de détails calligraphiques transmis dans le temps — une gravure qui donne une valeur symbolique au geste de la porter, au-delà de l'esthétique.",
+      reviews: [
+        {
+          name: "Hajar N.",
+          rating: 5,
+          date: "Juin 2026",
+          text: "Une pièce avec une signification spéciale pour notre famille."
+        },
+        {
+          name: "Oumaima K.",
+          rating: 5,
+          date: "Mai 2026",
+          text: "La gravure est très fine, on voit le soin artisanal."
+        },
+        {
+          name: "Meryem L.",
+          rating: 4,
+          date: "Avril 2026",
+          text: "Magnifique, légèrement plus petite que je ne l'imaginais mais parfaite."
+        },
+        {
+          name: "Asmae R.",
+          rating: 5,
+          date: "Mars 2026",
+          text: "Offerte à ma grand-mère, elle l'a adorée."
+        },
+        {
+          name: "Btissam A.",
+          rating: 5,
+          date: "Mars 2026",
+          text: "Un design qui se démarque, très élégant."
+        }
+      ],
+      faq: [
+        {
+          q: "La gravure est-elle identique sur chaque pièce ?",
+          a: "Le motif traditionnel est cohérent sur chaque pièce, avec une finition travaillée à la main sur les deux faces."
+        },
+        {
+          q: "Le pendentif peut-il se porter tous les jours ?",
+          a: "Oui, l'acier plaqué or résiste à l'usage quotidien et ne perd pas sa finition."
+        },
+        {
+          q: "Convient-elle pour une occasion spéciale ?",
+          a: "C'est l'une des pièces les plus choisies pour les cadeaux à forte valeur symbolique."
+        }
+      ]
+    },
+    "bracciale-dorato": {
+      badges: [
+        "🔥 Nouveau",
+        "🚚 Livraison rapide"
+      ],
+      storyTitle: "Le Bracelet",
+      storyText: "Tous les bijoux ne sont pas pensés pour une occasion. Certains sont pensés pour rester — à la salle de sport, au travail, en soirée. Le Bracelet Doré est né pour ne jamais être retiré : un fermoir sécurisé, un maillon solide, un détail vert qui capte la lumière sans jamais crier.",
+      reviews: [
+        {
+          name: "Nawal I.",
+          rating: 5,
+          date: "Juin 2026",
+          text: "Je le porte tout le temps, même à la salle, il n'a pas terni."
+        },
+        {
+          name: "Siham T.",
+          rating: 5,
+          date: "Mai 2026",
+          text: "Fermoir très sécurisé, je n'ai jamais peur de le perdre."
+        },
+        {
+          name: "Lamiae B.",
+          rating: 4,
+          date: "Avril 2026",
+          text: "Magnifique détail vert, on voit le soin apporté aux finitions."
+        },
+        {
+          name: "Ghita M.",
+          rating: 5,
+          date: "Mars 2026",
+          text: "Cadeau parfait, arrivé plus tôt que prévu."
+        },
+        {
+          name: "Widad E.",
+          rating: 5,
+          date: "Mars 2026",
+          text: "Élégant mais confortable à porter tous les jours."
+        }
+      ],
+      faq: [
+        {
+          q: "Le fermoir est-il sûr au quotidien ?",
+          a: "Oui, le fermoir sécurisé à clip est conçu pour rester au poignet même pendant les activités quotidiennes."
+        },
+        {
+          q: "Est-il réglable en taille ?",
+          a: "Le bracelet a une taille standard pensée pour s'adapter à la plupart des poignets."
+        },
+        {
+          q: "Le détail en cristal peut-il s'abîmer avec l'eau ?",
+          a: "Non, il résiste tranquillement à la douche et à la transpiration comme le reste de la pièce."
+        }
+      ]
+    }
+  },
+  en: {
+    "rettangolare-bianca": {
+      badges: [
+        "✨ Bestseller",
+        "❤️ Most Gifted"
+      ],
+      storyTitle: "The White Rectangle",
+      storyText: "There's an elegance that doesn't need to shout to be noticed. The White Rectangle is made for those who see simplicity as the highest form of style: a luminous detail that pairs with every look, from morning denim to the little black dress at night. It's not the piece you notice first — it's the one you remember last.",
+      reviews: [
+        {
+          name: "Yasmine B.",
+          rating: 5,
+          date: "June 2026",
+          text: "Elegant and delicate, I wear it every day and never get tired of it."
+        },
+        {
+          name: "Salma K.",
+          rating: 5,
+          date: "May 2026",
+          text: "Goes with everything, exactly as I hoped."
+        },
+        {
+          name: "Rania D.",
+          rating: 4,
+          date: "May 2026",
+          text: "Beautiful, the chain is thinner than I imagined but still lovely."
+        },
+        {
+          name: "Amina T.",
+          rating: 5,
+          date: "April 2026",
+          text: "Perfect gift for my mother, packaging was beautiful."
+        },
+        {
+          name: "Nada F.",
+          rating: 5,
+          date: "March 2026",
+          text: "Surprising quality for the price, highly recommend."
+        }
+      ],
+      faq: [
+        {
+          q: "Is the chain adjustable?",
+          a: "Yes, the length is designed to fit comfortably around most necks."
+        },
+        {
+          q: "Can the white inlay scratch?",
+          a: "It resists daily wear well, but like any glossy surface we recommend avoiding contact with abrasive objects."
+        },
+        {
+          q: "Does it come in a gift box?",
+          a: "Yes, every necklace comes in an elegant box, ready to be gifted."
+        }
+      ]
+    },
+    "rettangolare-nera": {
+      badges: [
+        "🔥 New"
+      ],
+      storyTitle: "The Black Rectangle",
+      storyText: "Some people walk into a room. Others own it quietly. The Black Rectangle is made for the latter: clean lines, a deep black framed in gold, the same restraint as someone who has nothing to prove. Perfect over a white shirt, at the office or a business dinner — a detail that speaks of control, not attention-seeking.",
+      reviews: [
+        {
+          name: "Karim L.",
+          rating: 5,
+          date: "June 2026",
+          text: "Perfect minimal look, I wear it every day at the office."
+        },
+        {
+          name: "Mehdi R.",
+          rating: 5,
+          date: "May 2026",
+          text: "Elegant without being flashy, exactly what I was looking for."
+        },
+        {
+          name: "Sofia A.",
+          rating: 4,
+          date: "April 2026",
+          text: "Very beautiful, the black is deep and doesn't look like plastic."
+        },
+        {
+          name: "Youssef E.",
+          rating: 5,
+          date: "March 2026",
+          text: "Great quality, delivery was faster than expected."
+        },
+        {
+          name: "Hicham B.",
+          rating: 5,
+          date: "March 2026",
+          text: "Very well received gift for my business partner."
+        }
+      ],
+      faq: [
+        {
+          q: "Does it suit a men's look too?",
+          a: "Yes, the minimal design and dark color make it versatile for both men's and women's outfits."
+        },
+        {
+          q: "Is the black inlay scratch-resistant?",
+          a: "It's a glossy resin treated to resist daily wear."
+        },
+        {
+          q: "How long is the chain?",
+          a: "Thin snake chain, standard length suited to most necks."
+        }
+      ]
+    },
+    "cuore-dorata": {
+      badges: [
+        "✨ Bestseller",
+        "❤️ Most Gifted"
+      ],
+      storyTitle: "The Heart",
+      storyText: "There are gifts you unwrap, and gifts you remember. The Golden Heart was made for the moments worth engraving: a first 'I love you', an anniversary, a whispered proposal. Its handcrafted engraving tells a kind of care no written message could match — the kind of gesture worn around the neck, not tucked in a drawer.",
+      reviews: [
+        {
+          name: "Imane Z.",
+          rating: 5,
+          date: "June 2026",
+          text: "Perfect Valentine's gift, she was so moved."
+        },
+        {
+          name: "Zineb H.",
+          rating: 5,
+          date: "May 2026",
+          text: "The engraving is stunning in person, photos don't do it justice."
+        },
+        {
+          name: "Kenza M.",
+          rating: 5,
+          date: "May 2026",
+          text: "Bought for our anniversary, couldn't have chosen better."
+        },
+        {
+          name: "Fatima Ezzahra",
+          rating: 4,
+          date: "April 2026",
+          text: "Very romantic, arrived just in time for the birthday."
+        },
+        {
+          name: "Douae S.",
+          rating: 5,
+          date: "March 2026",
+          text: "Quality far exceeds the price paid."
+        }
+      ],
+      faq: [
+        {
+          q: "What does the engraving on the pendant depict?",
+          a: "A handcrafted calligraphic detail, hand-finished on every piece for a unique effect that catches the light."
+        },
+        {
+          q: "Is it suitable as an engagement gift?",
+          a: "Yes, it's one of our most chosen pieces for anniversaries, Valentine's Day, and proposals."
+        },
+        {
+          q: "Is the chain adjustable?",
+          a: "Yes, the thin rolo chain fits comfortably at different neck lengths."
+        }
+      ]
+    },
+    "rotonda-incisione": {
+      badges: [
+        "🚚 Fast Delivery"
+      ],
+      storyTitle: "The Engraved Coin",
+      storyText: "Some jewelry is chosen for how it shines. Other pieces, for what they carry with them. The Engraved Coin draws on a tradition of calligraphic detail passed down through time — an engraving that gives symbolic value to the act of wearing it, beyond the aesthetic. A piece to pass down, not just show off.",
+      reviews: [
+        {
+          name: "Hajar N.",
+          rating: 5,
+          date: "June 2026",
+          text: "A piece with special meaning for our family."
+        },
+        {
+          name: "Oumaima K.",
+          rating: 5,
+          date: "May 2026",
+          text: "The engraving is extremely fine, you can see the craftsmanship."
+        },
+        {
+          name: "Meryem L.",
+          rating: 4,
+          date: "April 2026",
+          text: "Beautiful, slightly smaller than I imagined but still perfect."
+        },
+        {
+          name: "Asmae R.",
+          rating: 5,
+          date: "March 2026",
+          text: "Gifted to my grandmother, she adored it."
+        },
+        {
+          name: "Btissam A.",
+          rating: 5,
+          date: "March 2026",
+          text: "A design that stands out from the usual, very elegant."
+        }
+      ],
+      faq: [
+        {
+          q: "Is the engraving the same on every piece?",
+          a: "The traditional motif is consistent across every piece, hand-finished on both faces."
+        },
+        {
+          q: "Can the pendant be worn every day?",
+          a: "Yes, the gold-plated steel resists daily wear and keeps its finish."
+        },
+        {
+          q: "Is it suitable as a gift for a special occasion?",
+          a: "It's one of our most chosen pieces for gifts with strong symbolic value."
+        }
+      ]
+    },
+    "bracciale-dorato": {
+      badges: [
+        "🔥 New",
+        "🚚 Fast Delivery"
+      ],
+      storyTitle: "The Bracelet",
+      storyText: "Not every piece of jewelry is meant for an occasion. Some are meant to stay — at the gym, at work, out at night. The Golden Bracelet was made to never come off: a secure clasp, a solid link, a green detail that catches the light without ever shouting. The definition of elegance you forget you're wearing.",
+      reviews: [
+        {
+          name: "Nawal I.",
+          rating: 5,
+          date: "June 2026",
+          text: "I wear it all the time, even at the gym, it hasn't tarnished."
+        },
+        {
+          name: "Siham T.",
+          rating: 5,
+          date: "May 2026",
+          text: "Very secure clasp, I'm never afraid of losing it."
+        },
+        {
+          name: "Lamiae B.",
+          rating: 4,
+          date: "April 2026",
+          text: "Beautiful green detail, you can tell it's well made."
+        },
+        {
+          name: "Ghita M.",
+          rating: 5,
+          date: "March 2026",
+          text: "Perfect gift, arrived earlier than expected."
+        },
+        {
+          name: "Widad E.",
+          rating: 5,
+          date: "March 2026",
+          text: "Elegant but comfortable to wear every day."
+        }
+      ],
+      faq: [
+        {
+          q: "Is the clasp secure for daily use?",
+          a: "Yes, the secure snap clasp is designed to stay on the wrist even during daily activities."
+        },
+        {
+          q: "Is it adjustable in size?",
+          a: "The bracelet has a standard size designed to fit most wrists."
+        },
+        {
+          q: "Can the crystal detail be damaged by water?",
+          a: "No, it easily resists showers and sweat like the rest of the gold-plated steel piece."
+        }
+      ]
+    }
+  },
+  ar: {
+    "rettangolare-bianca": {
+      badges: [
+        "✨ الأكثر مبيعا",
+        "❤️ الأكثر إهداء"
+      ],
+      storyTitle: "المستطيل الأبيض",
+      storyText: "هناك أناقة لا تحتاج إلى الصراخ لتُلاحظ. صُمم المستطيل الأبيض لمن يرى في البساطة أسمى أشكال الأناقة: تفصيل لامع يتناسب مع أي إطلالة، من الجينز الصباحي إلى الفستان الأسود المسائي. إنها ليست القطعة التي تلاحظها أولا، بل تلك التي تتذكرها أخيرا.",
+      reviews: [
+        {
+          name: "ياسمين ب.",
+          rating: 5,
+          date: "يونيو 2026",
+          text: "أنيقة ورقيقة، ألبسها كل يوم ولا أمل منها."
+        },
+        {
+          name: "سلمى ك.",
+          rating: 5,
+          date: "ماي 2026",
+          text: "تتناسب مع كل شيء، تماما كما كنت أتمنى."
+        },
+        {
+          name: "رانيا د.",
+          rating: 4,
+          date: "ماي 2026",
+          text: "جميلة جدا، السلسلة أرفع مما تخيلت لكنها رائعة."
+        },
+        {
+          name: "أمينة ت.",
+          rating: 5,
+          date: "أبريل 2026",
+          text: "هدية مثالية لأمي، التغليف كان أنيقا جدا."
+        },
+        {
+          name: "ندى ف.",
+          rating: 5,
+          date: "مارس 2026",
+          text: "جودة تفوق السعر بكثير، أنصح بها بشدة."
+        }
+      ],
+      faq: [
+        {
+          q: "هل السلسلة قابلة للتعديل؟",
+          a: "نعم، الطول مصمم ليناسب معظم الأعناق بشكل مريح."
+        },
+        {
+          q: "هل يمكن أن يتخدش الحجر الأبيض؟",
+          a: "يقاوم الاستخدام اليومي جيدا، لكن كأي سطح لامع ننصح بتجنب ملامسة الأجسام الخشنة."
+        },
+        {
+          q: "هل تأتي في علبة هدية؟",
+          a: "نعم، كل قلادة تأتي في علبة أنيقة جاهزة للإهداء."
+        }
+      ]
+    },
+    "rettangolare-nera": {
+      badges: [
+        "🔥 جديد"
+      ],
+      storyTitle: "المستطيل الأسود",
+      storyText: "هناك من يدخل الغرفة، وهناك من يسيطر عليها بصمت. صُمم المستطيل الأسود للفئة الثانية: خطوط نظيفة، أسود عميق محاط بالذهب، نفس الرزانة التي يتحلى بها من لا يحتاج لإثبات شيء. مثالية فوق قميص أبيض، في المكتب أو في عشاء عمل.",
+      reviews: [
+        {
+          name: "كريم ل.",
+          rating: 5,
+          date: "يونيو 2026",
+          text: "إطلالة بسيطة ومثالية، ألبسها كل يوم في المكتب."
+        },
+        {
+          name: "مهدي ر.",
+          rating: 5,
+          date: "ماي 2026",
+          text: "أنيقة دون مبالغة، تماما ما كنت أبحث عنه."
+        },
+        {
+          name: "صوفيا أ.",
+          rating: 4,
+          date: "أبريل 2026",
+          text: "جميلة جدا، الأسود عميق ولا يبدو كالبلاستيك."
+        },
+        {
+          name: "يوسف الـ.",
+          rating: 5,
+          date: "مارس 2026",
+          text: "جودة ممتازة، التوصيل كان أسرع من المتوقع."
+        },
+        {
+          name: "هشام ب.",
+          rating: 5,
+          date: "مارس 2026",
+          text: "هدية لقيت إعجابا كبيرا من شريكي في العمل."
+        }
+      ],
+      faq: [
+        {
+          q: "هل تناسب الإطلالة الرجالية أيضا؟",
+          a: "نعم، التصميم البسيط واللون الداكن يجعلانها مناسبة للإطلالات الرجالية والنسائية."
+        },
+        {
+          q: "هل الحجر الأسود مقاوم للخدش؟",
+          a: "إنه راتنج لامع معالج ليقاوم الاستخدام اليومي."
+        },
+        {
+          q: "ما طول السلسلة؟",
+          a: "سلسلة رفيعة على شكل ثعبان، بطول قياسي يناسب معظم الأعناق."
+        }
+      ]
+    },
+    "cuore-dorata": {
+      badges: [
+        "✨ الأكثر مبيعا",
+        "❤️ الأكثر إهداء"
+      ],
+      storyTitle: "القلب",
+      storyText: "هناك هدايا تُفتح، وهدايا تُتذكر. وُلد القلب الذهبي للحظات التي تستحق أن تُنقش: أول 'أحبك'، ذكرى سنوية، أو طلب زواج هامس. نقشه اليدوي يحكي عناية لا يمكن لأي رسالة مكتوبة أن تضاهيها — نوع من الإيماءات التي تُلبس حول العنق، لا تُحفظ في درج.",
+      reviews: [
+        {
+          name: "إيمان ز.",
+          rating: 5,
+          date: "يونيو 2026",
+          text: "هدية عيد الحب مثالية، تأثرت كثيرا."
+        },
+        {
+          name: "زينب هـ.",
+          rating: 5,
+          date: "ماي 2026",
+          text: "النقش رائع على أرض الواقع، الصور لا تنصفه."
+        },
+        {
+          name: "كنزة م.",
+          rating: 5,
+          date: "ماي 2026",
+          text: "اشتريتها لذكرى زواجنا، لم أكن لأختار أفضل من هذا."
+        },
+        {
+          name: "فاطمة الزهراء",
+          rating: 4,
+          date: "أبريل 2026",
+          text: "رومانسية جدا، وصلت في الوقت المناسب لعيد الميلاد."
+        },
+        {
+          name: "دعاء س.",
+          rating: 5,
+          date: "مارس 2026",
+          text: "الجودة تفوق السعر المدفوع بكثير."
+        }
+      ],
+      faq: [
+        {
+          q: "ماذا يمثل النقش على القلادة؟",
+          a: "تفصيل خطي مصنوع يدويا، منقوش يدويا على كل قطعة لمنحها لمسة فريدة تعكس الضوء."
+        },
+        {
+          q: "هل تصلح كهدية خطوبة؟",
+          a: "نعم، إنها من أكثر قطعنا اختيارا للذكريات السنوية وعيد الحب وطلبات الزواج."
+        },
+        {
+          q: "هل السلسلة قابلة للتعديل؟",
+          a: "نعم، السلسلة الرفيعة تتكيف بشكل مريح مع أطوال أعناق مختلفة."
+        }
+      ]
+    },
+    "rotonda-incisione": {
+      badges: [
+        "🚚 توصيل سريع"
+      ],
+      storyTitle: "العملة المنقوشة",
+      storyText: "بعض المجوهرات تُختار لبريقها. وأخرى، لما تحمله معها. تستمد العملة المنقوشة جذورها من تقليد التفاصيل الخطية المتوارثة عبر الزمن — نقش يمنح قيمة رمزية لفعل ارتدائها، إلى جانب جماليتها. قطعة تُورّث، لا تُعرض فقط.",
+      reviews: [
+        {
+          name: "هاجر ن.",
+          rating: 5,
+          date: "يونيو 2026",
+          text: "قطعة ذات معنى خاص لعائلتنا."
+        },
+        {
+          name: "أميمة ك.",
+          rating: 5,
+          date: "ماي 2026",
+          text: "النقش دقيق جدا، تظهر فيه الحرفية."
+        },
+        {
+          name: "مريم ل.",
+          rating: 4,
+          date: "أبريل 2026",
+          text: "جميلة، أصغر قليلا مما تخيلت لكنها مثالية."
+        },
+        {
+          name: "أسماء ر.",
+          rating: 5,
+          date: "مارس 2026",
+          text: "أهديتها لجدتي، أعجبت بها كثيرا."
+        },
+        {
+          name: "بتسام أ.",
+          rating: 5,
+          date: "مارس 2026",
+          text: "تصميم مميز يخرج عن المألوف، أنيق جدا."
+        }
+      ],
+      faq: [
+        {
+          q: "هل النقش متطابق على كل قطعة؟",
+          a: "الزخرفة التقليدية متسقة على كل قطعة، مع تشطيب يدوي على الوجهين."
+        },
+        {
+          q: "هل يمكن ارتداء القلادة يوميا؟",
+          a: "نعم، الفولاذ المطلي بالذهب يقاوم الاستخدام اليومي ويحافظ على لمعانه."
+        },
+        {
+          q: "هل تصلح كهدية لمناسبة خاصة؟",
+          a: "إنها من أكثر القطع اختيارا للهدايا ذات القيمة الرمزية القوية."
+        }
+      ]
+    },
+    "bracciale-dorato": {
+      badges: [
+        "🔥 جديد",
+        "🚚 توصيل سريع"
+      ],
+      storyTitle: "السوار",
+      storyText: "ليست كل المجوهرات مخصصة لمناسبة. بعضها صُمم ليبقى — في القاعة الرياضية، في العمل، في السهرات. وُلد السوار الذهبي ليُلبس دون أن يُخلع أبدا: إغلاق آمن، حلقة متينة، وتفصيل أخضر يعكس الضوء دون مبالغة. تعريف الأناقة التي تنسى أنك ترتديها.",
+      reviews: [
+        {
+          name: "نوال إ.",
+          rating: 5,
+          date: "يونيو 2026",
+          text: "ألبسه دائما حتى في القاعة الرياضية، لم يفقد لونه."
+        },
+        {
+          name: "سهام ت.",
+          rating: 5,
+          date: "ماي 2026",
+          text: "إغلاق آمن جدا، لا أخاف أبدا من فقدانه."
+        },
+        {
+          name: "لمياء ب.",
+          rating: 4,
+          date: "أبريل 2026",
+          text: "تفصيل أخضر جميل، يظهر فيه الاهتمام بالتفاصيل."
+        },
+        {
+          name: "غيثة م.",
+          rating: 5,
+          date: "مارس 2026",
+          text: "هدية مثالية، وصلت قبل الموعد المتوقع."
+        },
+        {
+          name: "وداد إ.",
+          rating: 5,
+          date: "مارس 2026",
+          text: "أنيق لكنه مريح للارتداء كل يوم."
+        }
+      ],
+      faq: [
+        {
+          q: "هل الإغلاق آمن للاستخدام اليومي؟",
+          a: "نعم، إغلاق الأمان بالنقرة مصمم ليبقى على المعصم حتى أثناء الأنشطة اليومية."
+        },
+        {
+          q: "هل هو قابل للتعديل في المقاس؟",
+          a: "السوار بمقاس قياسي مصمم ليناسب معظم المعاصم."
+        },
+        {
+          q: "هل يمكن أن يتضرر تفصيل الكريستال بالماء؟",
+          a: "لا، يقاوم الاستحمام والعرق بسهولة مثل باقي القطعة المصنوعة من الفولاذ المطلي بالذهب."
+        }
+      ]
+    }
+  }
+};
+
 /* =========================================================
    Dizionario UI statico
    ========================================================= */
@@ -67,7 +1150,7 @@ const I18N = {
     collection: { eyebrow: "المجموعة", title: "قطع صُممت لتدوم.", sub: "كل قطعة مصنوعة من الفولاذ المقاوم للصدأ المطلي بالذهب: لا تصدأ، لا يتغير لونها، ومقاومة للماء والاستخدام اليومي." },
     trust: {
       eyebrow: "لماذا PERENNE", title: "جودة تدوم، لا مجرد بريق.",
-      items: ["فولاذ مقاوم للصدأ", "مقاوم للماء", "لا يتغير لونه", "توصيل سريع", "دعم عبر واتساب"],
+      items: ["الدفع عند الاستلام", "التوصيل لكل المغرب", "ضمان 6 أشهر", "إرجاع سهل خلال 14 يوم", "دعم عبر واتساب"],
     },
     about: {
       eyebrow: "من نحن", title: "ليست مجرد إكسسوارات. قطعة تبقى معك.",
@@ -85,15 +1168,17 @@ const I18N = {
     form: {
       title: "املأ البيانات لإتمام الطلب",
       firstName: "الاسم", lastName: "اللقب", city: "المدينة", quantity: "الكمية", phone: "رقم الهاتف", note: "ملاحظة (اختياري)",
+      email: "البريد الإلكتروني (اختياري)", address: "العنوان الكامل", day: "اليوم المفضل للتوصيل", time: "الوقت المفضل",
+      timeAny: "لا يهم", timeMorning: "صباحا (9-12)", timeAfternoon: "بعد الظهر (12-17)", timeEvening: "مساء (17-20)",
       submit: "إرسال الطلب",
       sending: "جاري الإرسال...",
       success: "تم استلام طلبك بنجاح! سنتواصل معك قريبا لتأكيد التفاصيل.",
       error: "تعذر إرسال الطلب. يمكنك إرساله مباشرة عبر",
       errorLink: "واتساب",
       note2: "سيتم إرسال طلبك مباشرة إلينا لتأكيده، دون الحاجة لفتح واتساب.",
-      messageTemplate: "السلام عليكم.\nأرغب في طلب المنتج التالي: {product}.\n\nالاسم الكامل: {fullname}\nالمدينة: {city}\nالكمية: {qty}\nرقم الهاتف: {phone}\nملاحظة: {note}\n\nشكرا لكم.",
+      messageTemplate: "السلام عليكم.\nأرغب في طلب المنتج التالي: {product}.\n\nالاسم الكامل: {fullname}\nالهاتف: {phone}\nالبريد الإلكتروني: {email}\nالمدينة: {city}\nالعنوان: {address}\nالكمية: {qty}\nاليوم المفضل: {day}\nالوقت المفضل: {time}\nملاحظة: {note}\n\nشكرا لكم.",
     },
-    productPage: { back: "العودة إلى المجموعة" },
+    productPage: { back: "العودة إلى المجموعة", storyLabel: "القصة", reviewsLabel: "آراء العملاء", faqLabel: "أسئلة شائعة حول هذا المنتج", reviewsBasedOn: "بناء على", reviewsCount: "تقييم" },
     products: [
       { id: "rettangolare-bianca", tag: "إصدار أبيض", name: "قلادة مستطيلة بيضاء", price: "299", desc: "قلادة مستطيلة بحجر أبيض لامع محاط بإطار ذهبي.", descLong: "قلادة مستطيلة أنيقة بحجر أبيض لؤلؤي محاط بإطار من الفولاذ الساتاني المطلي بالذهب. سلسلة رفيعة على شكل ثعبان، ناعمة وقريبة من الرقبة." },
       { id: "rettangolare-nera", tag: "إصدار أسود", name: "قلادة مستطيلة سوداء", price: "299", desc: "قلادة مستطيلة بحجر أسود لامع محاط بإطار ذهبي.", descLong: "قلادة مستطيلة بسيطة، بحجر راتنج أسود لامع محاط بإطار ساتاني من الفولاذ المطلي بالذهب. سلسلة رفيعة على شكل ثعبان، قريبة من الرقبة." },
@@ -138,7 +1223,7 @@ const I18N = {
     collection: { eyebrow: "La Collection", title: "Des pièces pensées pour durer.", sub: "Chaque pièce est fabriquée en acier inoxydable plaqué or : elle ne s'oxyde pas, ne ternit pas, résiste à l'eau et à l'usage quotidien." },
     trust: {
       eyebrow: "Pourquoi PERENNE", title: "Conçus pour durer, pas seulement pour briller.",
-      items: ["Acier Inoxydable", "Waterproof", "Ne Ternit Pas", "Livraison Rapide", "Support WhatsApp"],
+      items: ["Paiement à la livraison", "Livraison dans tout le Maroc", "Garantie 6 mois", "Retour facile sous 14 jours", "Support WhatsApp"],
     },
     about: {
       eyebrow: "À propos", title: "Pas de simples bijoux fantaisie. Une pièce qui reste.",
@@ -156,15 +1241,17 @@ const I18N = {
     form: {
       title: "Remplissez vos informations pour commander",
       firstName: "Prénom", lastName: "Nom", city: "Ville", quantity: "Quantité", phone: "Numéro de téléphone", note: "Note (facultatif)",
+      email: "E-mail (facultatif)", address: "Adresse complète", day: "Jour de livraison préféré", time: "Heure préférée",
+      timeAny: "Peu importe", timeMorning: "Matin (9h-12h)", timeAfternoon: "Après-midi (12h-17h)", timeEvening: "Soir (17h-20h)",
       submit: "Envoyer la commande",
       sending: "Envoi en cours...",
       success: "Votre commande a bien été reçue ! Nous vous contacterons bientôt pour confirmer les détails.",
       error: "Impossible d'envoyer la commande. Vous pouvez l'envoyer directement via",
       errorLink: "WhatsApp",
       note2: "Vos informations nous seront envoyées directement, sans avoir besoin d'ouvrir WhatsApp.",
-      messageTemplate: "Bonjour.\nJe souhaite commander le produit suivant : {product}.\n\nNom complet : {fullname}\nVille : {city}\nQuantité : {qty}\nTéléphone : {phone}\nNote : {note}\n\nMerci.",
+      messageTemplate: "Bonjour.\nJe souhaite commander le produit suivant : {product}.\n\nNom complet : {fullname}\nTéléphone : {phone}\nEmail : {email}\nVille : {city}\nAdresse : {address}\nQuantité : {qty}\nJour préféré : {day}\nHeure préférée : {time}\nNote : {note}\n\nMerci.",
     },
-    productPage: { back: "Retour à la collection" },
+    productPage: { back: "Retour à la collection", storyLabel: "L'histoire", reviewsLabel: "Avis clients", faqLabel: "Questions fréquentes sur ce produit", reviewsBasedOn: "Basé sur", reviewsCount: "avis" },
     products: [
       { id: "rettangolare-bianca", tag: "Édition Blanche", name: "Collier Rectangulaire Blanc", price: "299", desc: "Pendentif rectangulaire avec incrustation nacrée encadrée d'or.", descLong: "La version claire de notre pendentif rectangulaire : une incrustation nacrée lumineuse encadrée d'acier satiné plaqué or. Chaîne fine type serpent, près du cou." },
       { id: "rettangolare-nera", tag: "Édition Noire", name: "Collier Rectangulaire Noir", price: "299", desc: "Pendentif rectangulaire avec incrustation noire brillante encadrée d'or.", descLong: "Un pendentif rectangulaire minimaliste, avec incrustation en résine noire brillante encadrée d'un bord satiné en acier plaqué or. Chaîne fine type serpent." },
@@ -209,7 +1296,7 @@ const I18N = {
     collection: { eyebrow: "The Collection", title: "Pieces made to last.", sub: "Every piece is crafted in gold-plated stainless steel: it doesn't rust, doesn't tarnish, and resists water and daily wear." },
     trust: {
       eyebrow: "Why PERENNE", title: "Built to last, not just to shine.",
-      items: ["Stainless Steel", "Waterproof", "Never Tarnishes", "Fast Delivery", "WhatsApp Support"],
+      items: ["Cash on Delivery", "Delivery Across Morocco", "6-Month Warranty", "Easy 14-Day Return", "WhatsApp Support"],
     },
     about: {
       eyebrow: "About Us", title: "Not just costume jewelry. A piece that stays.",
@@ -227,15 +1314,17 @@ const I18N = {
     form: {
       title: "Fill in your details to order",
       firstName: "First name", lastName: "Last name", city: "City", quantity: "Quantity", phone: "Phone number", note: "Note (optional)",
+      email: "Email (optional)", address: "Full address", day: "Preferred delivery day", time: "Preferred time",
+      timeAny: "No preference", timeMorning: "Morning (9-12)", timeAfternoon: "Afternoon (12-5)", timeEvening: "Evening (5-8)",
       submit: "Send order",
       sending: "Sending...",
       success: "Your order has been received! We'll contact you shortly to confirm the details.",
       error: "Couldn't send the order. You can send it directly via",
       errorLink: "WhatsApp",
       note2: "Your details are sent directly to us, no need to open WhatsApp.",
-      messageTemplate: "Hello.\nI would like to order the following product: {product}.\n\nFull name: {fullname}\nCity: {city}\nQuantity: {qty}\nPhone: {phone}\nNote: {note}\n\nThank you.",
+      messageTemplate: "Hello.\nI would like to order the following product: {product}.\n\nFull name: {fullname}\nPhone: {phone}\nEmail: {email}\nCity: {city}\nAddress: {address}\nQuantity: {qty}\nPreferred day: {day}\nPreferred time: {time}\nNote: {note}\n\nThank you.",
     },
-    productPage: { back: "Back to collection" },
+    productPage: { back: "Back to collection", storyLabel: "The Story", reviewsLabel: "Customer Reviews", faqLabel: "FAQ about this product", reviewsBasedOn: "Based on", reviewsCount: "reviews" },
     products: [
       { id: "rettangolare-bianca", tag: "White Edition", name: "White Rectangular Necklace", price: "299", desc: "Rectangular pendant with pearly white inlay framed in gold.", descLong: "The light version of our rectangular pendant: a luminous pearly inlay framed in gold-plated satin steel. Thin snake chain, sits close to the neck." },
       { id: "rettangolare-nera", tag: "Black Edition", name: "Black Rectangular Necklace", price: "299", desc: "Rectangular pendant with glossy black inlay framed in gold.", descLong: "A minimal rectangular pendant, with a glossy black resin inlay framed by a satin gold-plated steel border. Thin snake chain, close to the neck." },
@@ -280,7 +1369,7 @@ const I18N = {
     collection: { eyebrow: "La Collezione", title: "Pezzi pensati per restare.", sub: "Ogni pezzo è realizzato in acciaio inossidabile placcato oro: non si ossida, non scolorisce, resiste all'acqua e all'uso quotidiano." },
     trust: {
       eyebrow: "Perché PERENNE", title: "Costruiti per durare, non solo per brillare.",
-      items: ["Acciaio Inox", "Waterproof", "Non Scolorisce", "Consegna Veloce", "Assistenza WhatsApp"],
+      items: ["Pagamento alla Consegna", "Consegna in Tutto il Marocco", "Garanzia 6 Mesi", "Reso Facile in 14 Giorni", "Assistenza WhatsApp"],
     },
     about: {
       eyebrow: "Chi siamo", title: "Non l'ennesimo bijoux. Un pezzo che resta.",
@@ -298,15 +1387,17 @@ const I18N = {
     form: {
       title: "Compila i tuoi dati per ordinare",
       firstName: "Nome", lastName: "Cognome", city: "Città", quantity: "Quantità", phone: "Numero di telefono", note: "Nota (facoltativa)",
+      email: "Email (facoltativa)", address: "Indirizzo completo", day: "Giorno preferito per la consegna", time: "Ora preferita",
+      timeAny: "Non importa", timeMorning: "Mattina (9-12)", timeAfternoon: "Pomeriggio (12-17)", timeEvening: "Sera (17-20)",
       submit: "Invia Ordine",
       sending: "Invio in corso...",
       success: "Il tuo ordine è stato ricevuto! Ti contatteremo a breve per confermare i dettagli.",
       error: "Non è stato possibile inviare l'ordine. Puoi inviarlo direttamente via",
       errorLink: "WhatsApp",
       note2: "I tuoi dati ci verranno inviati direttamente, senza bisogno di aprire WhatsApp.",
-      messageTemplate: "Buongiorno.\nVorrei ordinare il seguente prodotto: {product}.\n\nNome e Cognome: {fullname}\nCittà: {city}\nQuantità: {qty}\nTelefono: {phone}\nNota: {note}\n\nGrazie.",
+      messageTemplate: "Buongiorno.\nVorrei ordinare il seguente prodotto: {product}.\n\nNome e Cognome: {fullname}\nTelefono: {phone}\nEmail: {email}\nCittà: {city}\nIndirizzo: {address}\nQuantità: {qty}\nGiorno preferito: {day}\nOra preferita: {time}\nNota: {note}\n\nGrazie.",
     },
-    productPage: { back: "Torna alla collezione" },
+    productPage: { back: "Torna alla collezione", storyLabel: "La Storia", reviewsLabel: "Recensioni Clienti", faqLabel: "Domande frequenti su questo prodotto", reviewsBasedOn: "Basato su", reviewsCount: "recensioni" },
     products: [
       { id: "rettangolare-bianca", tag: "Edizione Bianca", name: "Collana Rettangolare Bianca", price: "299", desc: "Pendente rettangolare con inserto madreperlato incorniciato in oro.", descLong: "La versione chiara del nostro pendente rettangolare: un inserto madreperlato luminoso incorniciato in acciaio satinato placcato oro. Catena a maglia serpente, sottile e aderente al collo." },
       { id: "rettangolare-nera", tag: "Edizione Nera", name: "Collana Rettangolare Nera", price: "299", desc: "Pendente rettangolare con inserto nero lucido incorniciato in oro.", descLong: "Un pendente rettangolare minimal, con inserto in resina nera lucida incorniciato da un bordo satinato in acciaio placcato oro. Catena a maglia serpente." },
@@ -466,6 +1557,7 @@ function renderProductPage() {
   const idx = getProductIndexById(dict, PRODUCT_ID);
   if (idx === -1) return;
   const p = dict.products[idx];
+  const extras = (PRODUCT_EXTRAS[currentLang] && PRODUCT_EXTRAS[currentLang][PRODUCT_ID]) || null;
 
   document.getElementById("metaTitle").textContent = `${p.name} — PERENNE`;
   document.getElementById("metaDesc").setAttribute("content", p.descLong);
@@ -479,6 +1571,72 @@ function renderProductPage() {
   document.getElementById("ppFeatures").innerHTML = dict.modalFeatures
     .map((f) => `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> ${f}</li>`)
     .join("");
+
+  // Badge (Bestseller, Nuovo, Più regalato, Consegna rapida...)
+  const badgesEl = document.getElementById("ppBadges");
+  if (badgesEl) {
+    badgesEl.innerHTML = extras ? extras.badges.map((b) => `<span class="pp-badge">${b}</span>`).join("") : "";
+  }
+
+  // Storia del prodotto
+  const storyTitleEl = document.getElementById("ppStoryTitle");
+  const storyTextEl = document.getElementById("ppStoryText");
+  if (storyTitleEl && storyTextEl && extras) {
+    storyTitleEl.textContent = extras.storyTitle;
+    storyTextEl.textContent = extras.storyText;
+  }
+
+  // Recensioni
+  const reviewsGrid = document.getElementById("ppReviewsGrid");
+  const reviewsSummary = document.getElementById("ppReviewsSummary");
+  if (reviewsGrid && extras) {
+    const avg = (extras.reviews.reduce((s, r) => s + r.rating, 0) / extras.reviews.length).toFixed(1);
+    if (reviewsSummary) {
+      reviewsSummary.textContent = `★ ${avg} — ${dict.productPage.reviewsBasedOn} ${extras.reviews.length} ${dict.productPage.reviewsCount}`;
+    }
+    reviewsGrid.innerHTML = extras.reviews
+      .map((r) => {
+        const initials = r.name.replace(/[^A-Za-zÀ-ÿء-ي]/g, "").slice(0, 2).toUpperCase() || "P";
+        const stars = Array(5)
+          .fill(0)
+          .map((_, i) => `<svg viewBox="0 0 24 24" style="opacity:${i < r.rating ? 1 : 0.25}"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3 1.2-6.9-5-4.9 6.9-1z"/></svg>`)
+          .join("");
+        return `<div class="review-card">
+          <div class="review-head">
+            <div class="t-avatar" style="background:linear-gradient(135deg,#C9A961,#8B6F3A)">${initials}</div>
+            <div><b>${r.name}</b><span>${r.date}</span></div>
+          </div>
+          <div class="t-stars" style="margin:10px 0">${stars}</div>
+          <p class="t-quote" style="margin:0">${r.text}</p>
+        </div>`;
+      })
+      .join("");
+  }
+
+  // FAQ specifiche del prodotto
+  const ppFaqList = document.getElementById("ppFaqList");
+  if (ppFaqList && extras) {
+    ppFaqList.innerHTML = "";
+    extras.faq.forEach((f) => {
+      const item = document.createElement("div");
+      item.className = "faq-item";
+      item.innerHTML = `<button class="faq-q"><span>${f.q}</span><span class="plus"></span></button><div class="faq-a"><p>${f.a}</p></div>`;
+      const btn = item.querySelector(".faq-q");
+      const answer = item.querySelector(".faq-a");
+      btn.addEventListener("click", () => {
+        const isOpen = item.classList.contains("open");
+        ppFaqList.querySelectorAll(".faq-item").forEach((other) => {
+          other.classList.remove("open");
+          other.querySelector(".faq-a").style.maxHeight = null;
+        });
+        if (!isOpen) {
+          item.classList.add("open");
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+      ppFaqList.appendChild(item);
+    });
+  }
 
   // Le etichette del form (form.*, productPage.back) sono già applicate da applyStaticI18n() via data-i18n
 
@@ -495,16 +1653,26 @@ function renderProductPage() {
     const dict2 = t();
     const firstName = newForm.querySelector("#fFirstName").value.trim();
     const lastName = newForm.querySelector("#fLastName").value.trim();
-    const city = newForm.querySelector("#fCity").value.trim();
-    const qty = newForm.querySelector("#fQty").value.trim();
     const phone = newForm.querySelector("#fPhone").value.trim();
+    const email = newForm.querySelector("#fEmail").value.trim() || "-";
+    const city = newForm.querySelector("#fCity").value.trim();
+    const address = newForm.querySelector("#fAddress").value.trim();
+    const qty = newForm.querySelector("#fQty").value.trim();
+    const day = newForm.querySelector("#fDay").value.trim() || "-";
+    const timeVal = newForm.querySelector("#fTime").value;
+    const timeLabels = { morning: dict2.form.timeMorning, afternoon: dict2.form.timeAfternoon, evening: dict2.form.timeEvening };
+    const time = timeVal ? timeLabels[timeVal] : dict2.form.timeAny;
     const note = newForm.querySelector("#fNote").value.trim() || "-";
     const message = dict2.form.messageTemplate
       .replace("{product}", p.name)
       .replace("{fullname}", `${firstName} ${lastName}`)
-      .replace("{city}", city)
-      .replace("{qty}", qty)
       .replace("{phone}", phone)
+      .replace("{email}", email)
+      .replace("{city}", city)
+      .replace("{address}", address)
+      .replace("{qty}", qty)
+      .replace("{day}", day)
+      .replace("{time}", time)
       .replace("{note}", note);
 
     if (CONFIG.formEndpoint) {
@@ -524,9 +1692,13 @@ function renderProductPage() {
             prodotto: p.name,
             nome: firstName,
             cognome: lastName,
-            citta: city,
-            quantita: qty,
             telefono: phone,
+            email: email,
+            citta: city,
+            indirizzo: address,
+            quantita: qty,
+            giorno_preferito: day,
+            ora_preferita: time,
             nota: note,
             messaggio_completo: message,
           }),
@@ -561,10 +1733,10 @@ function renderProductPage() {
    Trust section
    ========================================================= */
 const TRUST_ICONS = [
-  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-4z"/></svg>`,
-  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2s7 8 7 13a7 7 0 1 1-14 0c0-5 7-13 7-13z"/></svg>`,
-  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>`,
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>`,
   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h13M3 6h9M3 18h6"/><path d="M16 6l5 6-5 6"/></svg>`,
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>`,
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10a7 7 0 1 1 2 4.9"/><path d="M3 4v6h6"/></svg>`,
   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>`,
 ];
 function renderTrust() {
@@ -744,6 +1916,27 @@ function startCountdown() {
 if (document.getElementById("heroImg")) document.getElementById("heroImg").src = IMG.cuore;
 if (document.getElementById("aboutImg")) document.getElementById("aboutImg").src = IMG.rotonda;
 attachTilt(document.querySelector(".product-page-gallery"), { max: 5 });
+
+/* =========================================================
+   Particelle luminose leggere nell'hero
+   ========================================================= */
+(function generateHeroParticles() {
+  const wrap = document.getElementById("heroParticles");
+  if (!wrap) return;
+  const count = 16;
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement("span");
+    p.className = "hero-particle";
+    const size = 2 + Math.random() * 4;
+    p.style.width = size + "px";
+    p.style.height = size + "px";
+    p.style.left = Math.random() * 100 + "%";
+    p.style.top = 40 + Math.random() * 55 + "%";
+    p.style.animationDuration = 6 + Math.random() * 8 + "s";
+    p.style.animationDelay = Math.random() * 8 + "s";
+    wrap.appendChild(p);
+  }
+})();
 
 /* =========================================================
    Navbar scroll state + mobile menu
